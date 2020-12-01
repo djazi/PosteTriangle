@@ -21,5 +21,10 @@ namespace PosteTriangle.PL
         {
             Application.Exit();
         }
+
+        private void BtnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
