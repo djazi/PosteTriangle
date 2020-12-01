@@ -63,8 +63,16 @@ namespace PosteTriangle.PL
 
         private void BtnParametre_Click(object sender, EventArgs e)
         {
-            pnlconnexion.Size = new Size(189, 132);
+            pnlconnexion.Size = new Size(188, 107);
             pnlconnexion.Visible = !pnlconnexion.Visible;
+        }
+
+        private void BtnConnecter_Click(object sender, EventArgs e)
+        {
+            //Afficher formulaire connexion
+            FRM_Connexion frmc = new FRM_Connexion();
+            frmc.ShowDialog();
+
         }
     }
 }

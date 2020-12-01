@@ -32,11 +32,6 @@ namespace PosteTriangle.PL
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Menu));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnAtelier = new System.Windows.Forms.Button();
-            this.BtnPerformance = new System.Windows.Forms.Button();
-            this.BtnGuide = new System.Windows.Forms.Button();
-            this.BtnRechercher = new System.Windows.Forms.Button();
-            this.BtnHideMenu = new System.Windows.Forms.Button();
             this.pnlbut = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlconnexion = new System.Windows.Forms.Panel();
@@ -45,6 +40,11 @@ namespace PosteTriangle.PL
             this.BtnParametre = new System.Windows.Forms.Button();
             this.BtnMinimized = new System.Windows.Forms.Button();
             this.BtnQuitter = new System.Windows.Forms.Button();
+            this.BtnHideMenu = new System.Windows.Forms.Button();
+            this.BtnGuide = new System.Windows.Forms.Button();
+            this.BtnRechercher = new System.Windows.Forms.Button();
+            this.BtnPerformance = new System.Windows.Forms.Button();
+            this.BtnAtelier = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlconnexion.SuspendLayout();
@@ -74,92 +74,6 @@ namespace PosteTriangle.PL
             this.panel1.Size = new System.Drawing.Size(929, 13);
             this.panel1.TabIndex = 2;
             // 
-            // BtnAtelier
-            // 
-            this.BtnAtelier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.BtnAtelier.FlatAppearance.BorderSize = 0;
-            this.BtnAtelier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnAtelier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtelier.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAtelier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtelier.Image = global::PosteTriangle.Properties.Resources.Office_Client_Male_Light_icon;
-            this.BtnAtelier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAtelier.Location = new System.Drawing.Point(15, 200);
-            this.BtnAtelier.Name = "BtnAtelier";
-            this.BtnAtelier.Size = new System.Drawing.Size(221, 57);
-            this.BtnAtelier.TabIndex = 5;
-            this.BtnAtelier.Text = "ATELIER";
-            this.BtnAtelier.UseVisualStyleBackColor = false;
-            this.BtnAtelier.Click += new System.EventHandler(this.BtnAtelier_Click);
-            // 
-            // BtnPerformance
-            // 
-            this.BtnPerformance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.BtnPerformance.FlatAppearance.BorderSize = 0;
-            this.BtnPerformance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnPerformance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPerformance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPerformance.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnPerformance.Image = global::PosteTriangle.Properties.Resources.graph_bar;
-            this.BtnPerformance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPerformance.Location = new System.Drawing.Point(15, 304);
-            this.BtnPerformance.Name = "BtnPerformance";
-            this.BtnPerformance.Size = new System.Drawing.Size(221, 57);
-            this.BtnPerformance.TabIndex = 6;
-            this.BtnPerformance.Text = "          PERFORMANCE";
-            this.BtnPerformance.UseVisualStyleBackColor = false;
-            this.BtnPerformance.Click += new System.EventHandler(this.BtnPerformance_Click);
-            // 
-            // BtnGuide
-            // 
-            this.BtnGuide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnGuide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.BtnGuide.FlatAppearance.BorderSize = 0;
-            this.BtnGuide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuide.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuide.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnGuide.Image = global::PosteTriangle.Properties.Resources.more_information;
-            this.BtnGuide.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuide.Location = new System.Drawing.Point(15, 532);
-            this.BtnGuide.Name = "BtnGuide";
-            this.BtnGuide.Size = new System.Drawing.Size(221, 58);
-            this.BtnGuide.TabIndex = 8;
-            this.BtnGuide.Text = "GUIDE";
-            this.BtnGuide.UseVisualStyleBackColor = false;
-            this.BtnGuide.Click += new System.EventHandler(this.BtnGuide_Click);
-            // 
-            // BtnRechercher
-            // 
-            this.BtnRechercher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.BtnRechercher.FlatAppearance.BorderSize = 0;
-            this.BtnRechercher.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnRechercher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRechercher.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRechercher.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnRechercher.Image = global::PosteTriangle.Properties.Resources.search;
-            this.BtnRechercher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRechercher.Location = new System.Drawing.Point(15, 403);
-            this.BtnRechercher.Name = "BtnRechercher";
-            this.BtnRechercher.Size = new System.Drawing.Size(221, 57);
-            this.BtnRechercher.TabIndex = 7;
-            this.BtnRechercher.Text = "   CHERCHER";
-            this.BtnRechercher.UseVisualStyleBackColor = false;
-            this.BtnRechercher.Click += new System.EventHandler(this.BtnRechercher_Click);
-            // 
-            // BtnHideMenu
-            // 
-            this.BtnHideMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnHideMenu.FlatAppearance.BorderSize = 0;
-            this.BtnHideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHideMenu.Image = global::PosteTriangle.Properties.Resources.Menu_32;
-            this.BtnHideMenu.Location = new System.Drawing.Point(200, 6);
-            this.BtnHideMenu.Name = "BtnHideMenu";
-            this.BtnHideMenu.Size = new System.Drawing.Size(32, 29);
-            this.BtnHideMenu.TabIndex = 5;
-            this.BtnHideMenu.UseVisualStyleBackColor = true;
-            this.BtnHideMenu.Click += new System.EventHandler(this.BtnHideMenu_Click);
-            // 
             // pnlbut
             // 
             this.pnlbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -187,7 +101,7 @@ namespace PosteTriangle.PL
             this.pnlconnexion.Controls.Add(this.BtnConnecter);
             this.pnlconnexion.Location = new System.Drawing.Point(44, 7);
             this.pnlconnexion.Name = "pnlconnexion";
-            this.pnlconnexion.Size = new System.Drawing.Size(191, 132);
+            this.pnlconnexion.Size = new System.Drawing.Size(188, 107);
             this.pnlconnexion.TabIndex = 10;
             // 
             // Btndeconnecter
@@ -199,7 +113,7 @@ namespace PosteTriangle.PL
             this.Btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btndeconnecter.Image = global::PosteTriangle.Properties.Resources.Deconnecte;
             this.Btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btndeconnecter.Location = new System.Drawing.Point(3, 76);
+            this.Btndeconnecter.Location = new System.Drawing.Point(3, 64);
             this.Btndeconnecter.Name = "Btndeconnecter";
             this.Btndeconnecter.Size = new System.Drawing.Size(183, 39);
             this.Btndeconnecter.TabIndex = 1;
@@ -215,12 +129,13 @@ namespace PosteTriangle.PL
             this.BtnConnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnConnecter.Image = global::PosteTriangle.Properties.Resources.Connected_16;
             this.BtnConnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConnecter.Location = new System.Drawing.Point(3, 18);
+            this.BtnConnecter.Location = new System.Drawing.Point(3, 4);
             this.BtnConnecter.Name = "BtnConnecter";
             this.BtnConnecter.Size = new System.Drawing.Size(183, 39);
             this.BtnConnecter.TabIndex = 0;
             this.BtnConnecter.Text = "Connecter";
             this.BtnConnecter.UseVisualStyleBackColor = true;
+            this.BtnConnecter.Click += new System.EventHandler(this.BtnConnecter_Click);
             // 
             // BtnParametre
             // 
@@ -259,6 +174,92 @@ namespace PosteTriangle.PL
             this.BtnQuitter.TabIndex = 7;
             this.BtnQuitter.UseVisualStyleBackColor = true;
             this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click_1);
+            // 
+            // BtnHideMenu
+            // 
+            this.BtnHideMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnHideMenu.FlatAppearance.BorderSize = 0;
+            this.BtnHideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHideMenu.Image = global::PosteTriangle.Properties.Resources.Menu_32;
+            this.BtnHideMenu.Location = new System.Drawing.Point(200, 6);
+            this.BtnHideMenu.Name = "BtnHideMenu";
+            this.BtnHideMenu.Size = new System.Drawing.Size(32, 29);
+            this.BtnHideMenu.TabIndex = 5;
+            this.BtnHideMenu.UseVisualStyleBackColor = true;
+            this.BtnHideMenu.Click += new System.EventHandler(this.BtnHideMenu_Click);
+            // 
+            // BtnGuide
+            // 
+            this.BtnGuide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnGuide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BtnGuide.FlatAppearance.BorderSize = 0;
+            this.BtnGuide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuide.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuide.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnGuide.Image = global::PosteTriangle.Properties.Resources.more_information;
+            this.BtnGuide.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuide.Location = new System.Drawing.Point(15, 532);
+            this.BtnGuide.Name = "BtnGuide";
+            this.BtnGuide.Size = new System.Drawing.Size(221, 58);
+            this.BtnGuide.TabIndex = 8;
+            this.BtnGuide.Text = "GUIDE";
+            this.BtnGuide.UseVisualStyleBackColor = false;
+            this.BtnGuide.Click += new System.EventHandler(this.BtnGuide_Click);
+            // 
+            // BtnRechercher
+            // 
+            this.BtnRechercher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BtnRechercher.FlatAppearance.BorderSize = 0;
+            this.BtnRechercher.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnRechercher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRechercher.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRechercher.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnRechercher.Image = global::PosteTriangle.Properties.Resources.search;
+            this.BtnRechercher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRechercher.Location = new System.Drawing.Point(15, 403);
+            this.BtnRechercher.Name = "BtnRechercher";
+            this.BtnRechercher.Size = new System.Drawing.Size(221, 57);
+            this.BtnRechercher.TabIndex = 7;
+            this.BtnRechercher.Text = "   CHERCHER";
+            this.BtnRechercher.UseVisualStyleBackColor = false;
+            this.BtnRechercher.Click += new System.EventHandler(this.BtnRechercher_Click);
+            // 
+            // BtnPerformance
+            // 
+            this.BtnPerformance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BtnPerformance.FlatAppearance.BorderSize = 0;
+            this.BtnPerformance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnPerformance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPerformance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerformance.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPerformance.Image = global::PosteTriangle.Properties.Resources.graph_bar;
+            this.BtnPerformance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPerformance.Location = new System.Drawing.Point(15, 304);
+            this.BtnPerformance.Name = "BtnPerformance";
+            this.BtnPerformance.Size = new System.Drawing.Size(221, 57);
+            this.BtnPerformance.TabIndex = 6;
+            this.BtnPerformance.Text = "          PERFORMANCE";
+            this.BtnPerformance.UseVisualStyleBackColor = false;
+            this.BtnPerformance.Click += new System.EventHandler(this.BtnPerformance_Click);
+            // 
+            // BtnAtelier
+            // 
+            this.BtnAtelier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BtnAtelier.FlatAppearance.BorderSize = 0;
+            this.BtnAtelier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnAtelier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtelier.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAtelier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtelier.Image = global::PosteTriangle.Properties.Resources.Office_Client_Male_Light_icon;
+            this.BtnAtelier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAtelier.Location = new System.Drawing.Point(15, 200);
+            this.BtnAtelier.Name = "BtnAtelier";
+            this.BtnAtelier.Size = new System.Drawing.Size(221, 57);
+            this.BtnAtelier.TabIndex = 5;
+            this.BtnAtelier.Text = "ATELIER";
+            this.BtnAtelier.UseVisualStyleBackColor = false;
+            this.BtnAtelier.Click += new System.EventHandler(this.BtnAtelier_Click);
             // 
             // FRM_Menu
             // 
