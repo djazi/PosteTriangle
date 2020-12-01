@@ -53,34 +53,34 @@ namespace PosteTriangle.PL
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 2);
+            this.panel1.Size = new System.Drawing.Size(319, 3);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 377);
+            this.panel2.Size = new System.Drawing.Size(3, 376);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(317, 2);
+            this.panel3.Location = new System.Drawing.Point(316, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 377);
+            this.panel3.Size = new System.Drawing.Size(3, 376);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(2, 377);
+            this.panel4.Location = new System.Drawing.Point(3, 376);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(315, 2);
+            this.panel4.Size = new System.Drawing.Size(313, 3);
             this.panel4.TabIndex = 3;
             // 
             // BtnQuitterConnexion
@@ -184,6 +184,7 @@ namespace PosteTriangle.PL
             this.BtnSe_Connecter.TabIndex = 12;
             this.BtnSe_Connecter.Text = "Se Connecter";
             this.BtnSe_Connecter.UseVisualStyleBackColor = false;
+            this.BtnSe_Connecter.Click += new System.EventHandler(this.BtnSe_Connecter_Click);
             // 
             // FRM_Connexion
             // 

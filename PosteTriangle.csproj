@@ -92,6 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CDB.cs" />
     <Compile Include="PL\FRM_Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,8 +320,6 @@
   <ItemGroup>
     <None Include="Resources\ville_32.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
