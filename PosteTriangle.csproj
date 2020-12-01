@@ -92,6 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PL\FRM_Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Connexion.Designer.cs">
+      <DependentUpon>FRM_Connexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\FRM_Connexion.resx">
+      <DependentUpon>FRM_Connexion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </EmbeddedResource>
