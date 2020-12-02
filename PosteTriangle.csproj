@@ -332,5 +332,8 @@
   <ItemGroup>
     <None Include="Resources\triangle-design-png-100-images-in-collection-page-2-triangle-design-png-338_338.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle-shape-design-1024x525.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

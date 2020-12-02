@@ -29,9 +29,6 @@ namespace PosteTriangle.PL
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_Sauvegarder = new System.Windows.Forms.Button();
-            this.Btn_Supprimer = new System.Windows.Forms.Button();
-            this.Btn_Commencer = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,61 +51,11 @@ namespace PosteTriangle.PL
             this.TxtP_N_Conformes = new System.Windows.Forms.TextBox();
             this.TxtLead_Time_Nominal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_Sauvegarder = new System.Windows.Forms.Button();
+            this.Btn_Supprimer = new System.Windows.Forms.Button();
+            this.Btn_Commencer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Btn_Sauvegarder
-            // 
-            this.Btn_Sauvegarder.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Btn_Sauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.Btn_Sauvegarder.FlatAppearance.BorderSize = 0;
-            this.Btn_Sauvegarder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btn_Sauvegarder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Sauvegarder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Sauvegarder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Sauvegarder.Image = global::PosteTriangle.Properties.Resources.Actions_list_add_icon;
-            this.Btn_Sauvegarder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sauvegarder.Location = new System.Drawing.Point(359, 10);
-            this.Btn_Sauvegarder.Name = "Btn_Sauvegarder";
-            this.Btn_Sauvegarder.Size = new System.Drawing.Size(244, 55);
-            this.Btn_Sauvegarder.TabIndex = 2;
-            this.Btn_Sauvegarder.Text = "      Sauvegarder";
-            this.Btn_Sauvegarder.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Supprimer
-            // 
-            this.Btn_Supprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.Btn_Supprimer.FlatAppearance.BorderSize = 0;
-            this.Btn_Supprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Supprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Supprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Supprimer.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
-            this.Btn_Supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Supprimer.Location = new System.Drawing.Point(662, 10);
-            this.Btn_Supprimer.Name = "Btn_Supprimer";
-            this.Btn_Supprimer.Size = new System.Drawing.Size(244, 55);
-            this.Btn_Supprimer.TabIndex = 1;
-            this.Btn_Supprimer.Text = "     Supprimer";
-            this.Btn_Supprimer.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Commencer
-            // 
-            this.Btn_Commencer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.Btn_Commencer.FlatAppearance.BorderSize = 0;
-            this.Btn_Commencer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btn_Commencer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Commencer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Commencer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Commencer.Image = global::PosteTriangle.Properties.Resources.Recycle_iconaaa;
-            this.Btn_Commencer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Commencer.Location = new System.Drawing.Point(21, 10);
-            this.Btn_Commencer.Name = "Btn_Commencer";
-            this.Btn_Commencer.Size = new System.Drawing.Size(244, 55);
-            this.Btn_Commencer.TabIndex = 0;
-            this.Btn_Commencer.Text = "    Commencer";
-            this.Btn_Commencer.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -225,6 +172,7 @@ namespace PosteTriangle.PL
             // 
             // TxtH_Debut
             // 
+            this.TxtH_Debut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtH_Debut.BackColor = System.Drawing.Color.LightCyan;
             this.TxtH_Debut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtH_Debut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +189,7 @@ namespace PosteTriangle.PL
             // 
             // TxtH_Fin
             // 
+            this.TxtH_Fin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtH_Fin.BackColor = System.Drawing.Color.LightCyan;
             this.TxtH_Fin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtH_Fin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,6 +222,7 @@ namespace PosteTriangle.PL
             // 
             // TxtDate
             // 
+            this.TxtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDate.BackColor = System.Drawing.Color.LightCyan;
             this.TxtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtDate.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,6 +239,7 @@ namespace PosteTriangle.PL
             // 
             // TxtTKT_Time
             // 
+            this.TxtTKT_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtTKT_Time.BackColor = System.Drawing.Color.LightCyan;
             this.TxtTKT_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTKT_Time.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +256,7 @@ namespace PosteTriangle.PL
             // 
             // TxtHeure
             // 
+            this.TxtHeure.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TxtHeure.BackColor = System.Drawing.Color.LightCyan;
             this.TxtHeure.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHeure.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,6 +273,7 @@ namespace PosteTriangle.PL
             // 
             // TxtStock_EC
             // 
+            this.TxtStock_EC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtStock_EC.BackColor = System.Drawing.Color.LightCyan;
             this.TxtStock_EC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStock_EC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +290,7 @@ namespace PosteTriangle.PL
             // 
             // TxtEffectif
             // 
+            this.TxtEffectif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtEffectif.BackColor = System.Drawing.Color.LightCyan;
             this.TxtEffectif.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtEffectif.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,6 +361,59 @@ namespace PosteTriangle.PL
             this.pictureBox1.Size = new System.Drawing.Size(33, 35);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
+            // 
+            // Btn_Sauvegarder
+            // 
+            this.Btn_Sauvegarder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_Sauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Sauvegarder.FlatAppearance.BorderSize = 0;
+            this.Btn_Sauvegarder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.Btn_Sauvegarder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Sauvegarder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Sauvegarder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Sauvegarder.Image = global::PosteTriangle.Properties.Resources.Actions_list_add_icon;
+            this.Btn_Sauvegarder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Sauvegarder.Location = new System.Drawing.Point(359, 10);
+            this.Btn_Sauvegarder.Name = "Btn_Sauvegarder";
+            this.Btn_Sauvegarder.Size = new System.Drawing.Size(244, 55);
+            this.Btn_Sauvegarder.TabIndex = 2;
+            this.Btn_Sauvegarder.Text = "      Sauvegarder";
+            this.Btn_Sauvegarder.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Supprimer
+            // 
+            this.Btn_Supprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Supprimer.FlatAppearance.BorderSize = 0;
+            this.Btn_Supprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.Btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Supprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Supprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Supprimer.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
+            this.Btn_Supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Supprimer.Location = new System.Drawing.Point(662, 10);
+            this.Btn_Supprimer.Name = "Btn_Supprimer";
+            this.Btn_Supprimer.Size = new System.Drawing.Size(244, 55);
+            this.Btn_Supprimer.TabIndex = 1;
+            this.Btn_Supprimer.Text = "     Supprimer";
+            this.Btn_Supprimer.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Commencer
+            // 
+            this.Btn_Commencer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Commencer.FlatAppearance.BorderSize = 0;
+            this.Btn_Commencer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.Btn_Commencer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Commencer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Commencer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Commencer.Image = global::PosteTriangle.Properties.Resources.Recycle_iconaaa;
+            this.Btn_Commencer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Commencer.Location = new System.Drawing.Point(21, 10);
+            this.Btn_Commencer.Name = "Btn_Commencer";
+            this.Btn_Commencer.Size = new System.Drawing.Size(244, 55);
+            this.Btn_Commencer.TabIndex = 0;
+            this.Btn_Commencer.Text = "    Commencer";
+            this.Btn_Commencer.UseVisualStyleBackColor = false;
             // 
             // User_Client_Atelier
             // 
