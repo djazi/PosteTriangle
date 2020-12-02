@@ -20,6 +20,36 @@ namespace PosteTriangle.PL
             pnlconnexion.Visible = false;
 
         }
+        //desactiver formulaire 
+        public void desactiverForm() 
+        {
+            BtnAtelier.Enabled = false;
+            BtnRechercher.Enabled = false;
+            BtnPerformance.Enabled = false;
+            BtnGuide.Enabled = false;
+            Btndeconnecter.Enabled = false;
+            pnlbut.Enabled = false;
+
+            BtnConnecter.Enabled = true;
+
+
+        }
+
+        //activer formulaire 
+        public void activerForm()
+        {
+            BtnAtelier.Enabled = true;
+            BtnRechercher.Enabled = true;
+            BtnPerformance.Enabled = true;
+            BtnGuide.Enabled = true;
+            Btndeconnecter.Enabled = true;
+            pnlbut.Enabled = true;
+
+            BtnConnecter.Enabled = false;
+            pnlconnexion.Visible = false;
+
+
+        }
 
         private void BtnQuitter_Click_1(object sender, EventArgs e)
         {
@@ -71,9 +101,20 @@ namespace PosteTriangle.PL
         private void BtnConnecter_Click(object sender, EventArgs e)
         {
             //Afficher formulaire connexion
-            FRM_Connexion frmc = new FRM_Connexion();
+            FRM_Connexion frmc = new FRM_Connexion(this); //this=FRM_Menu
+
             frmc.ShowDialog();
 
+        }
+
+        private void FRM_Menu_Load(object sender, EventArgs e)
+        {
+            desactiverForm();
+        }
+
+        private void Btndeconnecter_Click(object sender, EventArgs e)
+        {
+            desactiverForm();
         }
     }
 }

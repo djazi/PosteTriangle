@@ -119,6 +119,7 @@ namespace PosteTriangle.PL
             this.Btndeconnecter.TabIndex = 1;
             this.Btndeconnecter.Text = "Déconnecter";
             this.Btndeconnecter.UseVisualStyleBackColor = true;
+            this.Btndeconnecter.Click += new System.EventHandler(this.Btndeconnecter_Click);
             // 
             // BtnConnecter
             // 
@@ -274,6 +275,7 @@ namespace PosteTriangle.PL
             this.Name = "FRM_Menu";
             this.Text = "FRM_Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRM_Menu_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlconnexion.ResumeLayout(false);

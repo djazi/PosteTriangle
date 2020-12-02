@@ -13,15 +13,16 @@ namespace PosteTriangle.PL
 {
     public partial class FRM_Connexion : Form
     {
-        public FRM_Connexion()
+        private Form frmmenu;
+
+        public FRM_Connexion(Form Menu)
         {
             InitializeComponent();
+            this.frmmenu = Menu;
         }
 
-        private void FRM_Connexion_Load(object sender, EventArgs e)
-        {
-
-        }
+       
+            
 
         private void BtnQuitterConnexion_Click(object sender, EventArgs e)
         {
@@ -48,6 +49,8 @@ namespace PosteTriangle.PL
             if (TxtMdp.Text == "Mot de Passe")
             {
                 TxtMdp.Text = "";
+                TxtMdp.UseSystemPasswordChar = false;
+                TxtMdp.PasswordChar = '*';
                 TxtMdp.ForeColor = Color.WhiteSmoke;
 
 
@@ -69,6 +72,8 @@ namespace PosteTriangle.PL
             if (TxtMdp.Text == "")
             {
                 TxtMdp.Text = "Mot de Passe";
+                TxtMdp.UseSystemPasswordChar = true;
+
                 TxtMdp.ForeColor = Color.Silver;
             }
 
@@ -104,15 +109,22 @@ namespace PosteTriangle.PL
             //check if the user exists or not 
             if(table.Rows.Count > 0)
             {
-                MessageBox.Show("YES");
+                MessageBox.Show("Connexion a réussi","Connexion",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                (frmmenu as FRM_Menu).activerForm();
+                this.Close(); //quitter formulaire de connexion
             }
             else
             {
-                MessageBox.Show("NO");
+                MessageBox.Show("Connexion a échoué verifier votre Nom d'utilisateur ou votre mot de passe", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
 
+
+        }
+
+        private void FRM_Connexion_Load(object sender, EventArgs e)
+        {
 
         }
     }
