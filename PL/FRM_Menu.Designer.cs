@@ -35,6 +35,8 @@ namespace PosteTriangle.PL
             this.pnlbut = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlconnexion = new System.Windows.Forms.Panel();
+            this.pnlfirst = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btndeconnecter = new System.Windows.Forms.Button();
             this.BtnConnecter = new System.Windows.Forms.Button();
             this.BtnParametre = new System.Windows.Forms.Button();
@@ -45,14 +47,22 @@ namespace PosteTriangle.PL
             this.BtnRechercher = new System.Windows.Forms.Button();
             this.BtnPerformance = new System.Windows.Forms.Button();
             this.BtnAtelier = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlconnexion.SuspendLayout();
+            this.pnlfirst.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pnlbut);
             this.panel2.Controls.Add(this.BtnHideMenu);
             this.panel2.Controls.Add(this.BtnGuide);
@@ -84,7 +94,9 @@ namespace PosteTriangle.PL
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightCyan;
             this.panel3.Controls.Add(this.pnlconnexion);
+            this.panel3.Controls.Add(this.pnlfirst);
             this.panel3.Controls.Add(this.BtnParametre);
             this.panel3.Controls.Add(this.BtnMinimized);
             this.panel3.Controls.Add(this.BtnQuitter);
@@ -99,10 +111,38 @@ namespace PosteTriangle.PL
             this.pnlconnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.pnlconnexion.Controls.Add(this.Btndeconnecter);
             this.pnlconnexion.Controls.Add(this.BtnConnecter);
-            this.pnlconnexion.Location = new System.Drawing.Point(44, 7);
+            this.pnlconnexion.Location = new System.Drawing.Point(44, 6);
             this.pnlconnexion.Name = "pnlconnexion";
-            this.pnlconnexion.Size = new System.Drawing.Size(188, 107);
+            this.pnlconnexion.Size = new System.Drawing.Size(375, 49);
             this.pnlconnexion.TabIndex = 10;
+            // 
+            // pnlfirst
+            // 
+            this.pnlfirst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlfirst.BackColor = System.Drawing.Color.Transparent;
+            this.pnlfirst.Controls.Add(this.label3);
+            this.pnlfirst.Controls.Add(this.label2);
+            this.pnlfirst.Controls.Add(this.label1);
+            this.pnlfirst.Controls.Add(this.pictureBox1);
+            this.pnlfirst.Location = new System.Drawing.Point(0, 61);
+            this.pnlfirst.Name = "pnlfirst";
+            this.pnlfirst.Size = new System.Drawing.Size(929, 564);
+            this.pnlfirst.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::PosteTriangle.Properties.Resources.triangle_design_png_100_images_in_collection_page_2_triangle_design_png_338_338;
+            this.pictureBox1.Location = new System.Drawing.Point(217, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(489, 472);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Btndeconnecter
             // 
@@ -113,7 +153,7 @@ namespace PosteTriangle.PL
             this.Btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btndeconnecter.Image = global::PosteTriangle.Properties.Resources.Deconnecte;
             this.Btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btndeconnecter.Location = new System.Drawing.Point(3, 64);
+            this.Btndeconnecter.Location = new System.Drawing.Point(188, 4);
             this.Btndeconnecter.Name = "Btndeconnecter";
             this.Btndeconnecter.Size = new System.Drawing.Size(183, 39);
             this.Btndeconnecter.TabIndex = 1;
@@ -143,7 +183,7 @@ namespace PosteTriangle.PL
             this.BtnParametre.FlatAppearance.BorderSize = 0;
             this.BtnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnParametre.Image = global::PosteTriangle.Properties.Resources.Settings_32;
-            this.BtnParametre.Location = new System.Drawing.Point(4, 3);
+            this.BtnParametre.Location = new System.Drawing.Point(4, -1);
             this.BtnParametre.Name = "BtnParametre";
             this.BtnParametre.Size = new System.Drawing.Size(34, 31);
             this.BtnParametre.TabIndex = 9;
@@ -262,6 +302,52 @@ namespace PosteTriangle.PL
             this.BtnAtelier.UseVisualStyleBackColor = false;
             this.BtnAtelier.Click += new System.EventHandler(this.BtnAtelier_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label1.Location = new System.Drawing.Point(297, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(318, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "POSTE TRIANGLE ";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PosteTriangle.Properties.Resources.caution;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 38);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label2.Location = new System.Drawing.Point(773, 531);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "KHALID DJAZI";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label3.Location = new System.Drawing.Point(6, 531);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 24);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "OUISSAL ALLAM";
+            // 
             // FRM_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +365,10 @@ namespace PosteTriangle.PL
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlconnexion.ResumeLayout(false);
+            this.pnlfirst.ResumeLayout(false);
+            this.pnlfirst.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,5 +390,11 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Button BtnParametre;
         private System.Windows.Forms.Button BtnMinimized;
         private System.Windows.Forms.Button BtnQuitter;
+        private System.Windows.Forms.Panel pnlfirst;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

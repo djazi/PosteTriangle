@@ -85,6 +85,20 @@ namespace PosteTriangle.PL
         private void BtnAtelier_Click(object sender, EventArgs e)
         {
             pnlbut.Top = BtnAtelier.Top;
+            if(!pnlfirst.Controls.Contains(User_Client_Atelier.Instance))
+            {
+                pnlfirst.Controls.Add(User_Client_Atelier.Instance);
+                User_Client_Atelier.Instance.Dock = DockStyle.Fill;
+                User_Client_Atelier.Instance.BringToFront();
+
+
+
+            }else
+            {
+                User_Client_Atelier.Instance.BringToFront();
+                    
+            }
+
         }
 
         private void BtnGuide_Click(object sender, EventArgs e)
@@ -94,7 +108,7 @@ namespace PosteTriangle.PL
 
         private void BtnParametre_Click(object sender, EventArgs e)
         {
-            pnlconnexion.Size = new Size(188, 107);
+            pnlconnexion.Size = new Size(375, 49);
             pnlconnexion.Visible = !pnlconnexion.Visible;
         }
 

@@ -105,6 +105,12 @@
     <Compile Include="PL\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_Client_Atelier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\User_Client_Atelier.Designer.cs">
+      <DependentUpon>User_Client_Atelier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\FRM_Connexion.resx">
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_Client_Atelier.resx">
+      <DependentUpon>User_Client_Atelier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -320,6 +329,8 @@
   <ItemGroup>
     <None Include="Resources\ville_32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\triangle-design-png-100-images-in-collection-page-2-triangle-design-png-338_338.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

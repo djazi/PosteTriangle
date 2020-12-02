@@ -663,6 +663,16 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap triangle_design_png_100_images_in_collection_page_2_triangle_design_png_338_338 {
+            get {
+                object obj = ResourceManager.GetObject("triangle-design-png-100-images-in-collection-page-2-triangle-design-png-338_338", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ville_32 {
             get {
                 object obj = ResourceManager.GetObject("ville_32", resourceCulture);
