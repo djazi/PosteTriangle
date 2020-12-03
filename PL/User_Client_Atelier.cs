@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace PosteTriangle.PL
 {
    
@@ -320,6 +320,75 @@ namespace PosteTriangle.PL
                 TxtHeure.Text = "Heure";
                 TxtHeure.ForeColor = Color.Silver;
             }
+        }
+
+        private void Btn_Sauvegarder_Click(object sender, EventArgs e)
+        {
+            BL.CDB db = new BL.CDB();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `production`(`Id_Atelier`, `Date`, `Heure`, `Stock_Ec`, `P_Conforme`, `P_Non_Coforme`, `Stock_Nominale`, `Cycle_Time`) VALUES (@idA, @date, @heure, @Sec, @PC, @PNc, @Secn, @CT)", db.getConnection());
+
+            // fill table production 
+            command.Parameters.Add("@idA", MySqlDbType.VarChar).Value = TxtidAtelier.Text;
+            command.Parameters.Add("@date", MySqlDbType.VarChar).Value = TxtDate.Text;
+            command.Parameters.Add("@heure", MySqlDbType.VarChar).Value = TxtHeure.Text;
+            command.Parameters.Add("@Sec", MySqlDbType.VarChar).Value = TxtStock_EC.Text;
+            command.Parameters.Add("@PC", MySqlDbType.VarChar).Value = TxtP_Conforme.Text;
+            command.Parameters.Add("@PNc", MySqlDbType.VarChar).Value = TxtP_N_Conformes.Text;
+            command.Parameters.Add("@Secn", MySqlDbType.VarChar).Value = TxtStockEc_Nominale.Text;
+            command.Parameters.Add("@CT", MySqlDbType.VarChar).Value = TxtCycle_Time_Nominale.Text;
+
+            // fill table atelier
+
+
+
+            MySqlCommand command_1 = new MySqlCommand("INSERT INTO `atelier`(`Id`, `Nom_Atelier`, `TKT`, `Stock_Ec`, `Effectif`) VALUES (@idAT, @NomAtelier, @TKT, @STEC, @Effct)", db.getConnection());
+            command_1.Parameters.Add("@idAT", MySqlDbType.VarChar).Value = TxtidAtelier.Text;
+            command_1.Parameters.Add("@NomAtelier", MySqlDbType.VarChar).Value = "Triangle";
+            command_1.Parameters.Add("@TKT", MySqlDbType.VarChar).Value = TxtTKT_Time.Text;
+            command_1.Parameters.Add("@STEC", MySqlDbType.VarChar).Value = TxtStockEc_Nominale.Text;
+            command_1.Parameters.Add("@Effct", MySqlDbType.VarChar).Value = TxtEffectif.Text;
+
+            // fill table lead_time
+
+            MySqlCommand command_2 = new MySqlCommand("INSERT INTO `lt_time`(`Id_Atelier`, `H_debut`, `H_fin`) VALUES (@idAte, @Hd, @Hf)", db.getConnection());
+            command_2.Parameters.Add("@idAte", MySqlDbType.VarChar).Value = TxtidAtelier.Text;
+            command_2.Parameters.Add("@Hd", MySqlDbType.VarChar).Value = TxtH_Debut.Text;
+            command_2.Parameters.Add("@Hf", MySqlDbType.VarChar).Value = TxtH_Fin.Text;
+
+
+
+            //open the onnection       
+
+            db.openConnection();
+
+            //execute Query
+            if(command.ExecuteNonQuery() == 1 & command_1.ExecuteNonQuery() == 1 & command_2.ExecuteNonQuery() == 1 )
+            {
+                MessageBox.Show("Données enregistrées");
+            }
+            else
+            {
+                MessageBox.Show("Données NON enregistrées");
+            }
+
+            //close the connection
+            db.closeConnection();
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

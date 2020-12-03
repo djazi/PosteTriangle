@@ -256,7 +256,7 @@ namespace PosteTriangle.PL
             // 
             // TxtHeure
             // 
-            this.TxtHeure.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TxtHeure.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtHeure.BackColor = System.Drawing.Color.LightCyan;
             this.TxtHeure.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHeure.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,6 +355,7 @@ namespace PosteTriangle.PL
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::PosteTriangle.Properties.Resources.caution;
             this.pictureBox1.Location = new System.Drawing.Point(457, 112);
             this.pictureBox1.Name = "pictureBox1";
@@ -379,6 +380,7 @@ namespace PosteTriangle.PL
             this.Btn_Sauvegarder.TabIndex = 2;
             this.Btn_Sauvegarder.Text = "      Sauvegarder";
             this.Btn_Sauvegarder.UseVisualStyleBackColor = false;
+            this.Btn_Sauvegarder.Click += new System.EventHandler(this.Btn_Sauvegarder_Click);
             // 
             // Btn_Supprimer
             // 
