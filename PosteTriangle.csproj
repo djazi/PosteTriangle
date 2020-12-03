@@ -105,6 +105,12 @@
     <Compile Include="PL\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_Client_Affichage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\User_Client_Affichage.Designer.cs">
+      <DependentUpon>User_Client_Affichage.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\User_Client_Atelier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_Client_Affichage.resx">
+      <DependentUpon>User_Client_Affichage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\User_Client_Atelier.resx">
       <DependentUpon>User_Client_Atelier.cs</DependentUpon>
