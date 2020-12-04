@@ -35,7 +35,6 @@ namespace PosteTriangle.PL
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.TxtCycle_Time_Nominale = new System.Windows.Forms.TextBox();
             this.TxtidAtelier = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@ namespace PosteTriangle.PL
             this.TxtEffectif = new System.Windows.Forms.TextBox();
             this.TxtP_Conforme = new System.Windows.Forms.TextBox();
             this.TxtP_N_Conformes = new System.Windows.Forms.TextBox();
-            this.TxtLead_Time_Nominal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Sauvegarder = new System.Windows.Forms.Button();
             this.Btn_Supprimer = new System.Windows.Forms.Button();
@@ -72,7 +70,7 @@ namespace PosteTriangle.PL
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel2.Location = new System.Drawing.Point(21, 153);
+            this.panel2.Location = new System.Drawing.Point(21, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(885, 3);
             this.panel2.TabIndex = 4;
@@ -82,7 +80,7 @@ namespace PosteTriangle.PL
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel3.Location = new System.Drawing.Point(21, 284);
+            this.panel3.Location = new System.Drawing.Point(21, 306);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(885, 3);
             this.panel3.TabIndex = 7;
@@ -92,7 +90,7 @@ namespace PosteTriangle.PL
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel4.Location = new System.Drawing.Point(21, 216);
+            this.panel4.Location = new System.Drawing.Point(21, 238);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(885, 3);
             this.panel4.TabIndex = 6;
@@ -102,7 +100,7 @@ namespace PosteTriangle.PL
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel5.Location = new System.Drawing.Point(22, 418);
+            this.panel5.Location = new System.Drawing.Point(22, 440);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(885, 3);
             this.panel5.TabIndex = 9;
@@ -112,27 +110,17 @@ namespace PosteTriangle.PL
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel6.Location = new System.Drawing.Point(22, 350);
+            this.panel6.Location = new System.Drawing.Point(22, 372);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(885, 3);
             this.panel6.TabIndex = 8;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel7.Location = new System.Drawing.Point(22, 553);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(885, 3);
-            this.panel7.TabIndex = 11;
             // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel8.Location = new System.Drawing.Point(22, 485);
+            this.panel8.Location = new System.Drawing.Point(22, 507);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(885, 3);
             this.panel8.TabIndex = 10;
@@ -143,7 +131,7 @@ namespace PosteTriangle.PL
             this.TxtCycle_Time_Nominale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCycle_Time_Nominale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCycle_Time_Nominale.ForeColor = System.Drawing.Color.Gray;
-            this.TxtCycle_Time_Nominale.Location = new System.Drawing.Point(21, 189);
+            this.TxtCycle_Time_Nominale.Location = new System.Drawing.Point(21, 211);
             this.TxtCycle_Time_Nominale.Multiline = true;
             this.TxtCycle_Time_Nominale.Name = "TxtCycle_Time_Nominale";
             this.TxtCycle_Time_Nominale.Size = new System.Drawing.Size(220, 27);
@@ -159,7 +147,7 @@ namespace PosteTriangle.PL
             this.TxtidAtelier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtidAtelier.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtidAtelier.ForeColor = System.Drawing.Color.Gray;
-            this.TxtidAtelier.Location = new System.Drawing.Point(22, 126);
+            this.TxtidAtelier.Location = new System.Drawing.Point(22, 148);
             this.TxtidAtelier.Multiline = true;
             this.TxtidAtelier.Name = "TxtidAtelier";
             this.TxtidAtelier.Size = new System.Drawing.Size(220, 27);
@@ -177,7 +165,7 @@ namespace PosteTriangle.PL
             this.TxtH_Debut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtH_Debut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtH_Debut.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.TxtH_Debut.Location = new System.Drawing.Point(686, 122);
+            this.TxtH_Debut.Location = new System.Drawing.Point(686, 144);
             this.TxtH_Debut.Multiline = true;
             this.TxtH_Debut.Name = "TxtH_Debut";
             this.TxtH_Debut.Size = new System.Drawing.Size(220, 27);
@@ -194,7 +182,7 @@ namespace PosteTriangle.PL
             this.TxtH_Fin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtH_Fin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtH_Fin.ForeColor = System.Drawing.Color.Gray;
-            this.TxtH_Fin.Location = new System.Drawing.Point(686, 189);
+            this.TxtH_Fin.Location = new System.Drawing.Point(686, 211);
             this.TxtH_Fin.Multiline = true;
             this.TxtH_Fin.Name = "TxtH_Fin";
             this.TxtH_Fin.Size = new System.Drawing.Size(220, 27);
@@ -210,7 +198,7 @@ namespace PosteTriangle.PL
             this.TxtStockEc_Nominale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStockEc_Nominale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStockEc_Nominale.ForeColor = System.Drawing.Color.Gray;
-            this.TxtStockEc_Nominale.Location = new System.Drawing.Point(21, 251);
+            this.TxtStockEc_Nominale.Location = new System.Drawing.Point(21, 273);
             this.TxtStockEc_Nominale.Multiline = true;
             this.TxtStockEc_Nominale.Name = "TxtStockEc_Nominale";
             this.TxtStockEc_Nominale.Size = new System.Drawing.Size(220, 27);
@@ -227,7 +215,7 @@ namespace PosteTriangle.PL
             this.TxtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtDate.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDate.ForeColor = System.Drawing.Color.Gray;
-            this.TxtDate.Location = new System.Drawing.Point(686, 251);
+            this.TxtDate.Location = new System.Drawing.Point(686, 273);
             this.TxtDate.Multiline = true;
             this.TxtDate.Name = "TxtDate";
             this.TxtDate.Size = new System.Drawing.Size(220, 27);
@@ -244,7 +232,7 @@ namespace PosteTriangle.PL
             this.TxtTKT_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTKT_Time.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTKT_Time.ForeColor = System.Drawing.Color.Gray;
-            this.TxtTKT_Time.Location = new System.Drawing.Point(686, 317);
+            this.TxtTKT_Time.Location = new System.Drawing.Point(686, 339);
             this.TxtTKT_Time.Multiline = true;
             this.TxtTKT_Time.Name = "TxtTKT_Time";
             this.TxtTKT_Time.Size = new System.Drawing.Size(220, 27);
@@ -256,12 +244,11 @@ namespace PosteTriangle.PL
             // 
             // TxtHeure
             // 
-            this.TxtHeure.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtHeure.BackColor = System.Drawing.Color.LightCyan;
             this.TxtHeure.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHeure.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHeure.ForeColor = System.Drawing.Color.Gray;
-            this.TxtHeure.Location = new System.Drawing.Point(359, 520);
+            this.TxtHeure.Location = new System.Drawing.Point(22, 339);
             this.TxtHeure.Multiline = true;
             this.TxtHeure.Name = "TxtHeure";
             this.TxtHeure.Size = new System.Drawing.Size(220, 27);
@@ -278,7 +265,7 @@ namespace PosteTriangle.PL
             this.TxtStock_EC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStock_EC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStock_EC.ForeColor = System.Drawing.Color.Gray;
-            this.TxtStock_EC.Location = new System.Drawing.Point(686, 452);
+            this.TxtStock_EC.Location = new System.Drawing.Point(686, 474);
             this.TxtStock_EC.Multiline = true;
             this.TxtStock_EC.Name = "TxtStock_EC";
             this.TxtStock_EC.Size = new System.Drawing.Size(220, 27);
@@ -295,7 +282,7 @@ namespace PosteTriangle.PL
             this.TxtEffectif.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtEffectif.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEffectif.ForeColor = System.Drawing.Color.Gray;
-            this.TxtEffectif.Location = new System.Drawing.Point(686, 385);
+            this.TxtEffectif.Location = new System.Drawing.Point(686, 407);
             this.TxtEffectif.Multiline = true;
             this.TxtEffectif.Name = "TxtEffectif";
             this.TxtEffectif.Size = new System.Drawing.Size(220, 27);
@@ -311,7 +298,7 @@ namespace PosteTriangle.PL
             this.TxtP_Conforme.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtP_Conforme.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtP_Conforme.ForeColor = System.Drawing.Color.Gray;
-            this.TxtP_Conforme.Location = new System.Drawing.Point(22, 389);
+            this.TxtP_Conforme.Location = new System.Drawing.Point(22, 411);
             this.TxtP_Conforme.Multiline = true;
             this.TxtP_Conforme.Name = "TxtP_Conforme";
             this.TxtP_Conforme.Size = new System.Drawing.Size(220, 27);
@@ -327,7 +314,7 @@ namespace PosteTriangle.PL
             this.TxtP_N_Conformes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtP_N_Conformes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtP_N_Conformes.ForeColor = System.Drawing.Color.Gray;
-            this.TxtP_N_Conformes.Location = new System.Drawing.Point(21, 452);
+            this.TxtP_N_Conformes.Location = new System.Drawing.Point(21, 474);
             this.TxtP_N_Conformes.Multiline = true;
             this.TxtP_N_Conformes.Name = "TxtP_N_Conformes";
             this.TxtP_N_Conformes.Size = new System.Drawing.Size(244, 27);
@@ -337,27 +324,11 @@ namespace PosteTriangle.PL
             this.TxtP_N_Conformes.Enter += new System.EventHandler(this.TxtP_N_Conformes_Enter);
             this.TxtP_N_Conformes.Leave += new System.EventHandler(this.TxtP_N_Conformes_Leave);
             // 
-            // TxtLead_Time_Nominal
-            // 
-            this.TxtLead_Time_Nominal.BackColor = System.Drawing.Color.LightCyan;
-            this.TxtLead_Time_Nominal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtLead_Time_Nominal.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLead_Time_Nominal.ForeColor = System.Drawing.Color.Gray;
-            this.TxtLead_Time_Nominal.Location = new System.Drawing.Point(22, 317);
-            this.TxtLead_Time_Nominal.Multiline = true;
-            this.TxtLead_Time_Nominal.Name = "TxtLead_Time_Nominal";
-            this.TxtLead_Time_Nominal.Size = new System.Drawing.Size(220, 27);
-            this.TxtLead_Time_Nominal.TabIndex = 24;
-            this.TxtLead_Time_Nominal.Text = "Lead Time *";
-            this.TxtLead_Time_Nominal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtLead_Time_Nominal.Enter += new System.EventHandler(this.TxtLead_Time_Nominal_Enter);
-            this.TxtLead_Time_Nominal.Leave += new System.EventHandler(this.TxtLead_Time_Nominal_Leave);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::PosteTriangle.Properties.Resources.caution;
-            this.pictureBox1.Location = new System.Drawing.Point(457, 112);
+            this.pictureBox1.Location = new System.Drawing.Point(457, 134);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 35);
             this.pictureBox1.TabIndex = 25;
@@ -416,6 +387,7 @@ namespace PosteTriangle.PL
             this.Btn_Commencer.TabIndex = 0;
             this.Btn_Commencer.Text = "    Commencer";
             this.Btn_Commencer.UseVisualStyleBackColor = false;
+            this.Btn_Commencer.Click += new System.EventHandler(this.Btn_Commencer_Click);
             // 
             // User_Client_Atelier
             // 
@@ -423,7 +395,6 @@ namespace PosteTriangle.PL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.TxtLead_Time_Nominal);
             this.Controls.Add(this.TxtStock_EC);
             this.Controls.Add(this.TxtEffectif);
             this.Controls.Add(this.TxtP_Conforme);
@@ -436,7 +407,6 @@ namespace PosteTriangle.PL
             this.Controls.Add(this.TxtH_Debut);
             this.Controls.Add(this.TxtidAtelier);
             this.Controls.Add(this.TxtCycle_Time_Nominale);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
@@ -467,7 +437,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox TxtCycle_Time_Nominale;
         private System.Windows.Forms.TextBox TxtidAtelier;
@@ -481,7 +450,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.TextBox TxtEffectif;
         private System.Windows.Forms.TextBox TxtP_Conforme;
         private System.Windows.Forms.TextBox TxtP_N_Conformes;
-        private System.Windows.Forms.TextBox TxtLead_Time_Nominal;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

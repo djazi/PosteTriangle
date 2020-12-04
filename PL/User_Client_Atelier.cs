@@ -14,7 +14,7 @@ namespace PosteTriangle.PL
     public partial class User_Client_Atelier : UserControl
     {
         private static User_Client_Atelier Userclient;
-        //Creer un instance pour le usercontrole 
+        //Creer un instance pour le usercontrole Atelier 
         public static User_Client_Atelier Instance
         {
             get
@@ -181,25 +181,7 @@ namespace PosteTriangle.PL
 
         }
 
-        private void TxtLead_Time_Nominal_Enter(object sender, EventArgs e)
-        {
-            //Pour vider le textBox
-            if (TxtLead_Time_Nominal.Text == "Lead Time *")
-            {
-                TxtLead_Time_Nominal.Text = "";
-                TxtLead_Time_Nominal.ForeColor = Color.DarkGray;
-
-            }
-        }
-
-        private void TxtLead_Time_Nominal_Leave(object sender, EventArgs e)
-        {
-            if (TxtLead_Time_Nominal.Text == "")
-            {
-                TxtLead_Time_Nominal.Text = "Lead Time *";
-                TxtLead_Time_Nominal.ForeColor = Color.Silver;
-            }
-        }
+        
 
         private void TxtTKT_Time_Enter(object sender, EventArgs e)
         {
@@ -388,6 +370,16 @@ namespace PosteTriangle.PL
 
 
 
+
+        }
+
+        private void TxtLead_Time_Nominal_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Commencer_Click(object sender, EventArgs e)
+        {
 
         }
     }

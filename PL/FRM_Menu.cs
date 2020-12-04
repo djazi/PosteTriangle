@@ -80,6 +80,20 @@ namespace PosteTriangle.PL
         private void BtnPerformance_Click(object sender, EventArgs e)
         {
             pnlbut.Top = BtnPerformance.Top;
+            if (!pnlfirst.Controls.Contains(User_Client_Affichage.Instance1))
+            {
+                pnlfirst.Controls.Add(User_Client_Affichage.Instance1);
+                User_Client_Affichage.Instance1.Dock = DockStyle.Fill;
+                User_Client_Affichage.Instance1.BringToFront();
+
+
+
+            }
+            else
+            {
+                User_Client_Affichage.Instance1.BringToFront();
+
+            }
         }
 
         private void BtnAtelier_Click(object sender, EventArgs e)
@@ -129,6 +143,16 @@ namespace PosteTriangle.PL
         private void Btndeconnecter_Click(object sender, EventArgs e)
         {
             desactiverForm();
+        }
+
+        private void pnlfirst_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlconnexion_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

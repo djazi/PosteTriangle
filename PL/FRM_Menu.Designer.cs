@@ -31,31 +31,31 @@ namespace PosteTriangle.PL
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Menu));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlbut = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlconnexion = new System.Windows.Forms.Panel();
-            this.pnlfirst = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Btndeconnecter = new System.Windows.Forms.Button();
-            this.BtnConnecter = new System.Windows.Forms.Button();
-            this.BtnParametre = new System.Windows.Forms.Button();
-            this.BtnMinimized = new System.Windows.Forms.Button();
-            this.BtnQuitter = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlbut = new System.Windows.Forms.Panel();
             this.BtnHideMenu = new System.Windows.Forms.Button();
             this.BtnGuide = new System.Windows.Forms.Button();
             this.BtnRechercher = new System.Windows.Forms.Button();
             this.BtnPerformance = new System.Windows.Forms.Button();
             this.BtnAtelier = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlconnexion = new System.Windows.Forms.Panel();
+            this.Btndeconnecter = new System.Windows.Forms.Button();
+            this.BtnConnecter = new System.Windows.Forms.Button();
+            this.pnlfirst = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnParametre = new System.Windows.Forms.Button();
+            this.BtnMinimized = new System.Windows.Forms.Button();
+            this.BtnQuitter = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlconnexion.SuspendLayout();
             this.pnlfirst.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,171 +75,6 @@ namespace PosteTriangle.PL
             this.panel2.Size = new System.Drawing.Size(239, 638);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(239, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(929, 13);
-            this.panel1.TabIndex = 2;
-            // 
-            // pnlbut
-            // 
-            this.pnlbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.pnlbut.Location = new System.Drawing.Point(3, 200);
-            this.pnlbut.Name = "pnlbut";
-            this.pnlbut.Size = new System.Drawing.Size(10, 57);
-            this.pnlbut.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightCyan;
-            this.panel3.Controls.Add(this.pnlconnexion);
-            this.panel3.Controls.Add(this.pnlfirst);
-            this.panel3.Controls.Add(this.BtnParametre);
-            this.panel3.Controls.Add(this.BtnMinimized);
-            this.panel3.Controls.Add(this.BtnQuitter);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(239, 13);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(929, 625);
-            this.panel3.TabIndex = 3;
-            // 
-            // pnlconnexion
-            // 
-            this.pnlconnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.pnlconnexion.Controls.Add(this.Btndeconnecter);
-            this.pnlconnexion.Controls.Add(this.BtnConnecter);
-            this.pnlconnexion.Location = new System.Drawing.Point(44, 6);
-            this.pnlconnexion.Name = "pnlconnexion";
-            this.pnlconnexion.Size = new System.Drawing.Size(375, 49);
-            this.pnlconnexion.TabIndex = 10;
-            // 
-            // pnlfirst
-            // 
-            this.pnlfirst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlfirst.BackColor = System.Drawing.Color.Transparent;
-            this.pnlfirst.Controls.Add(this.label3);
-            this.pnlfirst.Controls.Add(this.label2);
-            this.pnlfirst.Controls.Add(this.label1);
-            this.pnlfirst.Controls.Add(this.pictureBox1);
-            this.pnlfirst.Location = new System.Drawing.Point(0, 61);
-            this.pnlfirst.Name = "pnlfirst";
-            this.pnlfirst.Size = new System.Drawing.Size(929, 564);
-            this.pnlfirst.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(297, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "POSTE TRIANGLE ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label2.Location = new System.Drawing.Point(773, 531);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "KHALID DJAZI";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label3.Location = new System.Drawing.Point(6, 531);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "OUISSAL ALLAM";
-            // 
-            // Btndeconnecter
-            // 
-            this.Btndeconnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btndeconnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btndeconnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btndeconnecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btndeconnecter.Image = global::PosteTriangle.Properties.Resources.Deconnecte;
-            this.Btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btndeconnecter.Location = new System.Drawing.Point(188, 4);
-            this.Btndeconnecter.Name = "Btndeconnecter";
-            this.Btndeconnecter.Size = new System.Drawing.Size(183, 39);
-            this.Btndeconnecter.TabIndex = 1;
-            this.Btndeconnecter.Text = "Déconnecter";
-            this.Btndeconnecter.UseVisualStyleBackColor = true;
-            this.Btndeconnecter.Click += new System.EventHandler(this.Btndeconnecter_Click);
-            // 
-            // BtnConnecter
-            // 
-            this.BtnConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnConnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.BtnConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnConnecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnConnecter.Image = global::PosteTriangle.Properties.Resources.Connected_16;
-            this.BtnConnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConnecter.Location = new System.Drawing.Point(3, 4);
-            this.BtnConnecter.Name = "BtnConnecter";
-            this.BtnConnecter.Size = new System.Drawing.Size(183, 39);
-            this.BtnConnecter.TabIndex = 0;
-            this.BtnConnecter.Text = "Connecter";
-            this.BtnConnecter.UseVisualStyleBackColor = true;
-            this.BtnConnecter.Click += new System.EventHandler(this.BtnConnecter_Click);
-            // 
-            // BtnParametre
-            // 
-            this.BtnParametre.FlatAppearance.BorderSize = 0;
-            this.BtnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnParametre.Image = global::PosteTriangle.Properties.Resources.Settings_32;
-            this.BtnParametre.Location = new System.Drawing.Point(4, -1);
-            this.BtnParametre.Name = "BtnParametre";
-            this.BtnParametre.Size = new System.Drawing.Size(34, 31);
-            this.BtnParametre.TabIndex = 9;
-            this.BtnParametre.UseVisualStyleBackColor = true;
-            this.BtnParametre.Click += new System.EventHandler(this.BtnParametre_Click);
-            // 
-            // BtnMinimized
-            // 
-            this.BtnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMinimized.FlatAppearance.BorderSize = 0;
-            this.BtnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMinimized.Image = global::PosteTriangle.Properties.Resources.Subtract_32;
-            this.BtnMinimized.Location = new System.Drawing.Point(851, 5);
-            this.BtnMinimized.Name = "BtnMinimized";
-            this.BtnMinimized.Size = new System.Drawing.Size(31, 29);
-            this.BtnMinimized.TabIndex = 8;
-            this.BtnMinimized.UseVisualStyleBackColor = true;
-            this.BtnMinimized.Click += new System.EventHandler(this.BtnMinimized_Click_1);
-            // 
-            // BtnQuitter
-            // 
-            this.BtnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnQuitter.FlatAppearance.BorderSize = 0;
-            this.BtnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnQuitter.Image = global::PosteTriangle.Properties.Resources.Shutdown_32;
-            this.BtnQuitter.Location = new System.Drawing.Point(884, 2);
-            this.BtnQuitter.Name = "BtnQuitter";
-            this.BtnQuitter.Size = new System.Drawing.Size(40, 34);
-            this.BtnQuitter.TabIndex = 7;
-            this.BtnQuitter.UseVisualStyleBackColor = true;
-            this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click_1);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PosteTriangle.Properties.Resources.caution;
@@ -248,6 +83,14 @@ namespace PosteTriangle.PL
             this.pictureBox2.Size = new System.Drawing.Size(37, 38);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // pnlbut
+            // 
+            this.pnlbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.pnlbut.Location = new System.Drawing.Point(3, 200);
+            this.pnlbut.Name = "pnlbut";
+            this.pnlbut.Size = new System.Drawing.Size(10, 57);
+            this.pnlbut.TabIndex = 5;
             // 
             // BtnHideMenu
             // 
@@ -335,6 +178,127 @@ namespace PosteTriangle.PL
             this.BtnAtelier.UseVisualStyleBackColor = false;
             this.BtnAtelier.Click += new System.EventHandler(this.BtnAtelier_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(239, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(929, 13);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightCyan;
+            this.panel3.Controls.Add(this.pnlconnexion);
+            this.panel3.Controls.Add(this.pnlfirst);
+            this.panel3.Controls.Add(this.BtnParametre);
+            this.panel3.Controls.Add(this.BtnMinimized);
+            this.panel3.Controls.Add(this.BtnQuitter);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(239, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(929, 625);
+            this.panel3.TabIndex = 3;
+            // 
+            // pnlconnexion
+            // 
+            this.pnlconnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.pnlconnexion.Controls.Add(this.Btndeconnecter);
+            this.pnlconnexion.Controls.Add(this.BtnConnecter);
+            this.pnlconnexion.Location = new System.Drawing.Point(44, 6);
+            this.pnlconnexion.Name = "pnlconnexion";
+            this.pnlconnexion.Size = new System.Drawing.Size(375, 49);
+            this.pnlconnexion.TabIndex = 10;
+            this.pnlconnexion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlconnexion_Paint);
+            // 
+            // Btndeconnecter
+            // 
+            this.Btndeconnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.Btndeconnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.Btndeconnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btndeconnecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btndeconnecter.Image = global::PosteTriangle.Properties.Resources.Deconnecte;
+            this.Btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btndeconnecter.Location = new System.Drawing.Point(188, 4);
+            this.Btndeconnecter.Name = "Btndeconnecter";
+            this.Btndeconnecter.Size = new System.Drawing.Size(183, 39);
+            this.Btndeconnecter.TabIndex = 1;
+            this.Btndeconnecter.Text = "Déconnecter";
+            this.Btndeconnecter.UseVisualStyleBackColor = true;
+            this.Btndeconnecter.Click += new System.EventHandler(this.Btndeconnecter_Click);
+            // 
+            // BtnConnecter
+            // 
+            this.BtnConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnConnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConnecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConnecter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnConnecter.Image = global::PosteTriangle.Properties.Resources.Connected_16;
+            this.BtnConnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConnecter.Location = new System.Drawing.Point(3, 4);
+            this.BtnConnecter.Name = "BtnConnecter";
+            this.BtnConnecter.Size = new System.Drawing.Size(183, 39);
+            this.BtnConnecter.TabIndex = 0;
+            this.BtnConnecter.Text = "Connecter";
+            this.BtnConnecter.UseVisualStyleBackColor = true;
+            this.BtnConnecter.Click += new System.EventHandler(this.BtnConnecter_Click);
+            // 
+            // pnlfirst
+            // 
+            this.pnlfirst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlfirst.BackColor = System.Drawing.Color.Transparent;
+            this.pnlfirst.Controls.Add(this.label3);
+            this.pnlfirst.Controls.Add(this.label2);
+            this.pnlfirst.Controls.Add(this.label1);
+            this.pnlfirst.Controls.Add(this.pictureBox1);
+            this.pnlfirst.Location = new System.Drawing.Point(0, 61);
+            this.pnlfirst.Name = "pnlfirst";
+            this.pnlfirst.Size = new System.Drawing.Size(929, 564);
+            this.pnlfirst.TabIndex = 11;
+            this.pnlfirst.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlfirst_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label3.Location = new System.Drawing.Point(6, 531);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 24);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "OUISSAL ALLAM";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label2.Location = new System.Drawing.Point(773, 531);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "KHALID DJAZI";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label1.Location = new System.Drawing.Point(297, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(318, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "POSTE TRIANGLE ";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -347,6 +311,44 @@ namespace PosteTriangle.PL
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // BtnParametre
+            // 
+            this.BtnParametre.FlatAppearance.BorderSize = 0;
+            this.BtnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnParametre.Image = global::PosteTriangle.Properties.Resources.Settings_32;
+            this.BtnParametre.Location = new System.Drawing.Point(4, -1);
+            this.BtnParametre.Name = "BtnParametre";
+            this.BtnParametre.Size = new System.Drawing.Size(34, 31);
+            this.BtnParametre.TabIndex = 9;
+            this.BtnParametre.UseVisualStyleBackColor = true;
+            this.BtnParametre.Click += new System.EventHandler(this.BtnParametre_Click);
+            // 
+            // BtnMinimized
+            // 
+            this.BtnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMinimized.FlatAppearance.BorderSize = 0;
+            this.BtnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimized.Image = global::PosteTriangle.Properties.Resources.Subtract_32;
+            this.BtnMinimized.Location = new System.Drawing.Point(851, 5);
+            this.BtnMinimized.Name = "BtnMinimized";
+            this.BtnMinimized.Size = new System.Drawing.Size(31, 29);
+            this.BtnMinimized.TabIndex = 8;
+            this.BtnMinimized.UseVisualStyleBackColor = true;
+            this.BtnMinimized.Click += new System.EventHandler(this.BtnMinimized_Click_1);
+            // 
+            // BtnQuitter
+            // 
+            this.BtnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnQuitter.FlatAppearance.BorderSize = 0;
+            this.BtnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnQuitter.Image = global::PosteTriangle.Properties.Resources.Shutdown_32;
+            this.BtnQuitter.Location = new System.Drawing.Point(884, 2);
+            this.BtnQuitter.Name = "BtnQuitter";
+            this.BtnQuitter.Size = new System.Drawing.Size(40, 34);
+            this.BtnQuitter.TabIndex = 7;
+            this.BtnQuitter.UseVisualStyleBackColor = true;
+            this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click_1);
             // 
             // FRM_Menu
             // 
@@ -363,11 +365,11 @@ namespace PosteTriangle.PL
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_Menu_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnlconnexion.ResumeLayout(false);
             this.pnlfirst.ResumeLayout(false);
             this.pnlfirst.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
