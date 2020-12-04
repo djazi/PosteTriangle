@@ -344,5 +344,29 @@
   <ItemGroup>
     <None Include="Resources\triangle-shape-design-1024x525.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\growth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speedometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi45.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

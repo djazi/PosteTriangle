@@ -313,6 +313,26 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flag {
+            get {
+                object obj = ResourceManager.GetObject("flag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flag__1_ {
+            get {
+                object obj = ResourceManager.GetObject("flag (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gmail_32 {
             get {
                 object obj = ResourceManager.GetObject("Gmail_32", resourceCulture);
@@ -326,6 +346,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap graph_bar {
             get {
                 object obj = ResourceManager.GetObject("graph-bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap growth {
+            get {
+                object obj = ResourceManager.GetObject("growth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +396,36 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kpi {
+            get {
+                object obj = ResourceManager.GetObject("kpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kpi1 {
+            get {
+                object obj = ResourceManager.GetObject("kpi1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kpi45 {
+            get {
+                object obj = ResourceManager.GetObject("kpi45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,6 +613,16 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap right_arrow {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -626,6 +696,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap Shutdown_32 {
             get {
                 object obj = ResourceManager.GetObject("Shutdown_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap speedometer {
+            get {
+                object obj = ResourceManager.GetObject("speedometer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
