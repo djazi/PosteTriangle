@@ -51,12 +51,13 @@ namespace PosteTriangle.PL
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxPosteSuivant = new System.Windows.Forms.ComboBox();
             this.TxtSuivant = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnFermeture = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Sauvegarder = new System.Windows.Forms.Button();
             this.Btn_Supprimer = new System.Windows.Forms.Button();
             this.Btn_Performance = new System.Windows.Forms.Button();
+            this.BtnOuverture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -354,12 +355,15 @@ namespace PosteTriangle.PL
             "Ovale",
             "Rect",
             "Triangle",
-            "Vague"});
+            "Vague",
+            "PF",
+            "PNC"});
             this.comboBoxPosteSuivant.Location = new System.Drawing.Point(687, 186);
             this.comboBoxPosteSuivant.Name = "comboBoxPosteSuivant";
             this.comboBoxPosteSuivant.Size = new System.Drawing.Size(220, 32);
             this.comboBoxPosteSuivant.TabIndex = 34;
             this.comboBoxPosteSuivant.Text = "Poste Suivant";
+            this.comboBoxPosteSuivant.SelectedIndexChanged += new System.EventHandler(this.comboBoxPosteSuivant_SelectedIndexChanged);
             // 
             // TxtSuivant
             // 
@@ -380,41 +384,41 @@ namespace PosteTriangle.PL
             this.TxtSuivant.UseVisualStyleBackColor = false;
             this.TxtSuivant.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // BtnFermeture
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Image = global::PosteTriangle.Properties.Resources.flag__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(663, 553);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 55);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "    Fermeture";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnFermeture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnFermeture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.BtnFermeture.FlatAppearance.BorderSize = 0;
+            this.BtnFermeture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnFermeture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFermeture.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFermeture.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnFermeture.Image = global::PosteTriangle.Properties.Resources.flag__1_;
+            this.BtnFermeture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFermeture.Location = new System.Drawing.Point(662, 553);
+            this.BtnFermeture.Name = "BtnFermeture";
+            this.BtnFermeture.Size = new System.Drawing.Size(244, 55);
+            this.BtnFermeture.TabIndex = 36;
+            this.BtnFermeture.Text = "    Fermeture";
+            this.BtnFermeture.UseVisualStyleBackColor = false;
+            this.BtnFermeture.Click += new System.EventHandler(this.BtnFermeture_Click);
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::PosteTriangle.Properties.Resources.flag;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(22, 553);
+            this.button1.Image = global::PosteTriangle.Properties.Resources.Recycle_iconaaa;
+            this.button1.Location = new System.Drawing.Point(444, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 55);
+            this.button1.Size = new System.Drawing.Size(51, 55);
             this.button1.TabIndex = 35;
-            this.button1.Text = "    Ouverture";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -428,7 +432,7 @@ namespace PosteTriangle.PL
             // 
             // Btn_Sauvegarder
             // 
-            this.Btn_Sauvegarder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_Sauvegarder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Sauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Btn_Sauvegarder.FlatAppearance.BorderSize = 0;
             this.Btn_Sauvegarder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -437,7 +441,7 @@ namespace PosteTriangle.PL
             this.Btn_Sauvegarder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Sauvegarder.Image = global::PosteTriangle.Properties.Resources.Actions_list_add_icon;
             this.Btn_Sauvegarder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sauvegarder.Location = new System.Drawing.Point(348, 10);
+            this.Btn_Sauvegarder.Location = new System.Drawing.Point(663, 3);
             this.Btn_Sauvegarder.Name = "Btn_Sauvegarder";
             this.Btn_Sauvegarder.Size = new System.Drawing.Size(244, 55);
             this.Btn_Sauvegarder.TabIndex = 2;
@@ -446,7 +450,7 @@ namespace PosteTriangle.PL
             // 
             // Btn_Supprimer
             // 
-            this.Btn_Supprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.Btn_Supprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -455,12 +459,13 @@ namespace PosteTriangle.PL
             this.Btn_Supprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Supprimer.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
             this.Btn_Supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Supprimer.Location = new System.Drawing.Point(662, 10);
+            this.Btn_Supprimer.Location = new System.Drawing.Point(348, 553);
             this.Btn_Supprimer.Name = "Btn_Supprimer";
             this.Btn_Supprimer.Size = new System.Drawing.Size(244, 55);
             this.Btn_Supprimer.TabIndex = 1;
             this.Btn_Supprimer.Text = "       Remise a Zéro";
             this.Btn_Supprimer.UseVisualStyleBackColor = false;
+            this.Btn_Supprimer.Click += new System.EventHandler(this.Btn_Supprimer_Click);
             // 
             // Btn_Performance
             // 
@@ -480,13 +485,33 @@ namespace PosteTriangle.PL
             this.Btn_Performance.UseVisualStyleBackColor = false;
             this.Btn_Performance.Click += new System.EventHandler(this.Btn_Commencer_Click);
             // 
+            // BtnOuverture
+            // 
+            this.BtnOuverture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnOuverture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.BtnOuverture.FlatAppearance.BorderSize = 0;
+            this.BtnOuverture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.BtnOuverture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOuverture.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOuverture.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnOuverture.Image = global::PosteTriangle.Properties.Resources.flag;
+            this.BtnOuverture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnOuverture.Location = new System.Drawing.Point(21, 553);
+            this.BtnOuverture.Name = "BtnOuverture";
+            this.BtnOuverture.Size = new System.Drawing.Size(244, 55);
+            this.BtnOuverture.TabIndex = 38;
+            this.BtnOuverture.Text = "    Ouverture";
+            this.BtnOuverture.UseVisualStyleBackColor = false;
+            this.BtnOuverture.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // User_Client_Atelier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.BtnOuverture);
             this.Controls.Add(this.TxtSuivant);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnFermeture);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxPosteSuivant);
             this.Controls.Add(this.label1);
@@ -550,7 +575,8 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxPosteSuivant;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnFermeture;
         private System.Windows.Forms.Button TxtSuivant;
+        private System.Windows.Forms.Button BtnOuverture;
     }
 }

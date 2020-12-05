@@ -31,6 +31,9 @@ namespace PosteTriangle.PL
             InitializeComponent();
             
         }
+        private int a = 0;
+        private int b = 0;
+       
 
         private void User_Client_Atelier_Load(object sender, EventArgs e)
         {
@@ -314,23 +317,190 @@ namespace PosteTriangle.PL
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int a = 0, b = 0, sum = 0, sum1 = 0;
-
-
-            if (checkBoxPC.Checked) 
+            //auto_increment pour PC et PNC et stocke 
+            int s = Convert.ToInt32(TxtStockEc_Nominale.Text);
+            if (s > 0)
             {
-                sum = a + 1;
-                TxtP_Conforme.Text = sum.ToString();
+                if (checkBoxPC.Checked)
+                {
+                    a++;
+                    TxtP_Conforme.Text = a.ToString();
+                    checkBoxPC.Checked = false;
+                }
+                if (checkBoxPNC.Checked)
+                {
+                    b++;
+                    TxtP_N_Conformes.Text = b.ToString();
+                    checkBoxPNC.Checked = false;
+
+                }
+
+
+
+                TxtStockEc_Nominale.Text = Convert.ToString(s - 1);
+                TxtStock_EC.Text = TxtStockEc_Nominale.Text;
+
+            }
+            BL.CDB db = new BL.CDB();
+            MySqlCommand command = new MySqlCommand("UPDATE stock_poste SET Striangle=@s WHERE Date=@dt ", db.getConnection());
+                  
+            // update stock  
+
+            command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+            command.Parameters.Add("@s", MySqlDbType.Int32).Value = TxtStockEc_Nominale.Text;
+
+            //open the onnection       
+
+            db.openConnection();
+
+            //envoie OF a PF
+            if (comboBoxPosteSuivant.SelectedItem.Equals("PF"))
+            {
+                MySqlCommand command_1 = new MySqlCommand("UPDATE stock_poste SET PF=PF+1 WHERE Date=@dt ", db.getConnection());
+                command_1.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_1.ExecuteNonQuery();
+
+
+            }
+            //envoie OF au poste croix
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Croix"))
+            {
+                MySqlCommand command_2 = new MySqlCommand("UPDATE stock_poste SET Scroix=Scroix+1 WHERE Date=@dt ", db.getConnection());
+                command_2.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_2.ExecuteNonQuery();
+
+
+            }
+            //envoie OF au poste vague
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Vague"))
+            {
+                MySqlCommand command_3 = new MySqlCommand("UPDATE stock_poste SET Svague=Svague+1 WHERE Date=@dt ", db.getConnection());
+                command_3.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_3.ExecuteNonQuery();
+
+
+            }
+            //envoie OF au poste Etoile
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Etoile"))
+            {
+                MySqlCommand command_4 = new MySqlCommand("UPDATE stock_poste SET Setoile=Setoile+1 WHERE Date=@dt ", db.getConnection());
+                command_4.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_4.ExecuteNonQuery();
+
 
             }
 
-            
-            if (checkBoxPNC.Checked)
+            //envoie OF au poste Ovale
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Ovale"))
             {
-                sum1 = b + 1;
-                TxtP_N_Conformes.Text = sum1.ToString();
+                MySqlCommand command_5 = new MySqlCommand("UPDATE stock_poste SET Sovale=Sovale+1 WHERE Date=@dt ", db.getConnection());
+                command_5.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_5.ExecuteNonQuery();
+
+
             }
+            //envoie OF au poste Rect
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Rect"))
+            {
+                MySqlCommand command_6 = new MySqlCommand("UPDATE stock_poste SET Srect=Srect+1 WHERE Date=@dt ", db.getConnection());
+                command_6.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_6.ExecuteNonQuery();
+
+
+            }
+            //envoie OF au poste Triangle
+            if (comboBoxPosteSuivant.SelectedItem.Equals("Triangle"))
+            {
+                MySqlCommand command_7 = new MySqlCommand("UPDATE stock_poste SET Striangle=Striangle+1 WHERE Date=@dt ", db.getConnection());
+                command_7.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                command_7.ExecuteNonQuery();
+
+
+            }
+
+
+
+
+
+
+
+            //execute Query
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("sortie de produit");
+            }
+            else
+            {
+                MessageBox.Show("erreur lors sortie de produit ");
+            }
+
+            //close the connection
+            db.closeConnection();
+
+
+
+
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TxtNomAtelier.Text = "Triangle";
+            TxtEffectif.Text = Convert.ToString(1);
+            TxtTKT_Time.Text = Convert.ToString(16);
+
+            BL.CDB db = new BL.CDB();
+            db.openConnection();
+
+            // a modifer pour chaque Poste 
+
+            MySqlDataAdapter asdf = new MySqlDataAdapter("SELECT * from stock_poste WHERE Date = '" + TxtDate.Text + "'", db.getConnection());
+            DataTable ss = new DataTable();
+            asdf.Fill(ss);
+            TxtStockEc_Nominale.Text = ss.Rows[0][5].ToString();
             
+
+
+
+
+
+            //close the connection
+            db.closeConnection();
+
+
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFermeture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPosteSuivant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Supprimer_Click(object sender, EventArgs e)
+        {
+            TxtNomAtelier.Text = "Nom Atelier";
+            TxtDate.Text = "Date";
+            TxtStockEc_Nominale.Text = "Stock en Cours*";
+            TxtP_N_Conformes.Text = "Piéces Non Conformes";
+            TxtP_Conforme.Text = "Piéces Conformes";
+            TxtH_Debut.Text = "Heure Début";
+            TxtEffectif.Text = "Effectif";
+            TxtH_Fin.Text = "Heure de Fin ";
+            TxtStock_EC.Text = "Stock en Cours";
+            TxtTKT_Time.Text = "Takt time";
+            comboBoxPosteSuivant.Text = "Poste Suivant";
         }
     }
 }
