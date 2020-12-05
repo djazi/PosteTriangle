@@ -29,6 +29,7 @@ namespace PosteTriangle.PL
        public User_Client_Atelier()
         {
             InitializeComponent();
+            
         }
 
         private void User_Client_Atelier_Load(object sender, EventArgs e)
@@ -284,6 +285,52 @@ namespace PosteTriangle.PL
         private void TxtP_Conforme_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtNomAtelier_Enter(object sender, EventArgs e)
+        {
+            //Pour vider le textBox
+            if (TxtNomAtelier.Text == "Nom Atelier")
+            {
+                TxtNomAtelier.Text = "";
+                TxtNomAtelier.ForeColor = Color.DarkGray;
+
+            }
+        }
+
+        private void TxtNomAtelier_Leave(object sender, EventArgs e)
+        {
+            if (TxtNomAtelier.Text == "")
+            {
+                TxtNomAtelier.Text = "Nom Atelier";
+                TxtNomAtelier.ForeColor = Color.Silver;
+            }
+        }
+
+        private void checkBoxPC_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int a = 0, b = 0, sum = 0, sum1 = 0;
+
+
+            if (checkBoxPC.Checked) 
+            {
+                sum = a + 1;
+                TxtP_Conforme.Text = sum.ToString();
+
+            }
+
+            
+            if (checkBoxPNC.Checked)
+            {
+                sum1 = b + 1;
+                TxtP_N_Conformes.Text = sum1.ToString();
+            }
+            
         }
     }
 }

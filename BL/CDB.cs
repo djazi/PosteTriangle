@@ -12,7 +12,7 @@ namespace PosteTriangle.BL
 
 
 
-        private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=database_si");
+        private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=projets5");
 
         //create a function to open the question
         public void openConnection()

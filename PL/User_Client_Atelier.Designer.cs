@@ -46,11 +46,11 @@ namespace PosteTriangle.PL
             this.TxtP_N_Conformes = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.TxtNomAtelier = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxPC = new System.Windows.Forms.CheckBox();
+            this.checkBoxPNC = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboBoxPosteSuivant = new System.Windows.Forms.ComboBox();
+            this.TxtSuivant = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -122,7 +122,6 @@ namespace PosteTriangle.PL
             // 
             // TxtH_Debut
             // 
-            this.TxtH_Debut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtH_Debut.BackColor = System.Drawing.Color.LightCyan;
             this.TxtH_Debut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtH_Debut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,7 +205,7 @@ namespace PosteTriangle.PL
             // 
             // TxtStock_EC
             // 
-            this.TxtStock_EC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtStock_EC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtStock_EC.BackColor = System.Drawing.Color.LightCyan;
             this.TxtStock_EC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStock_EC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,36 +294,39 @@ namespace PosteTriangle.PL
             this.TxtNomAtelier.TabIndex = 28;
             this.TxtNomAtelier.Text = "Nom Atelier";
             this.TxtNomAtelier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNomAtelier.Enter += new System.EventHandler(this.TxtNomAtelier_Enter);
+            this.TxtNomAtelier.Leave += new System.EventHandler(this.TxtNomAtelier_Leave);
             // 
-            // checkBox1
+            // checkBoxPC
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatAppearance.BorderSize = 0;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox1.Location = new System.Drawing.Point(428, 190);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 28);
-            this.checkBox1.TabIndex = 31;
-            this.checkBox1.Text = "PC";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxPC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.checkBoxPC.AutoSize = true;
+            this.checkBoxPC.FlatAppearance.BorderSize = 0;
+            this.checkBoxPC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxPC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPC.ForeColor = System.Drawing.Color.Gray;
+            this.checkBoxPC.Location = new System.Drawing.Point(428, 190);
+            this.checkBoxPC.Name = "checkBoxPC";
+            this.checkBoxPC.Size = new System.Drawing.Size(55, 28);
+            this.checkBoxPC.TabIndex = 31;
+            this.checkBoxPC.Text = "PC";
+            this.checkBoxPC.UseVisualStyleBackColor = true;
+            this.checkBoxPC.CheckedChanged += new System.EventHandler(this.checkBoxPC_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxPNC
             // 
-            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.FlatAppearance.BorderSize = 0;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox2.Location = new System.Drawing.Point(489, 190);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(71, 28);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.Text = "PNC";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxPNC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.checkBoxPNC.AutoSize = true;
+            this.checkBoxPNC.FlatAppearance.BorderSize = 0;
+            this.checkBoxPNC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxPNC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPNC.ForeColor = System.Drawing.Color.Gray;
+            this.checkBoxPNC.Location = new System.Drawing.Point(489, 190);
+            this.checkBoxPNC.Name = "checkBoxPNC";
+            this.checkBoxPNC.Size = new System.Drawing.Size(71, 28);
+            this.checkBoxPNC.TabIndex = 32;
+            this.checkBoxPNC.Text = "PNC";
+            this.checkBoxPNC.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -338,44 +340,45 @@ namespace PosteTriangle.PL
             this.label1.TabIndex = 33;
             this.label1.Text = "Fin de Journée";
             // 
-            // comboBox1
+            // comboBoxPosteSuivant
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxPosteSuivant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPosteSuivant.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBoxPosteSuivant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxPosteSuivant.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPosteSuivant.ForeColor = System.Drawing.Color.Gray;
+            this.comboBoxPosteSuivant.FormattingEnabled = true;
+            this.comboBoxPosteSuivant.Items.AddRange(new object[] {
             "Croix",
             "Etoile",
             "Ovale",
             "Rect",
             "Triangle",
             "Vague"});
-            this.comboBox1.Location = new System.Drawing.Point(686, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 32);
-            this.comboBox1.TabIndex = 34;
-            this.comboBox1.Text = "Poste Suivant";
+            this.comboBoxPosteSuivant.Location = new System.Drawing.Point(687, 186);
+            this.comboBoxPosteSuivant.Name = "comboBoxPosteSuivant";
+            this.comboBoxPosteSuivant.Size = new System.Drawing.Size(220, 32);
+            this.comboBoxPosteSuivant.TabIndex = 34;
+            this.comboBoxPosteSuivant.Text = "Poste Suivant";
             // 
-            // button3
+            // TxtSuivant
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::PosteTriangle.Properties.Resources.right_arrow;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(369, 249);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 55);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "      Suivant";
-            this.button3.UseVisualStyleBackColor = false;
+            this.TxtSuivant.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TxtSuivant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.TxtSuivant.FlatAppearance.BorderSize = 0;
+            this.TxtSuivant.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.TxtSuivant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TxtSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSuivant.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TxtSuivant.Image = global::PosteTriangle.Properties.Resources.right_arrow;
+            this.TxtSuivant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TxtSuivant.Location = new System.Drawing.Point(348, 249);
+            this.TxtSuivant.Name = "TxtSuivant";
+            this.TxtSuivant.Size = new System.Drawing.Size(244, 55);
+            this.TxtSuivant.TabIndex = 37;
+            this.TxtSuivant.Text = "      Suivant";
+            this.TxtSuivant.UseVisualStyleBackColor = false;
+            this.TxtSuivant.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -434,7 +437,7 @@ namespace PosteTriangle.PL
             this.Btn_Sauvegarder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Sauvegarder.Image = global::PosteTriangle.Properties.Resources.Actions_list_add_icon;
             this.Btn_Sauvegarder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sauvegarder.Location = new System.Drawing.Point(369, 10);
+            this.Btn_Sauvegarder.Location = new System.Drawing.Point(348, 10);
             this.Btn_Sauvegarder.Name = "Btn_Sauvegarder";
             this.Btn_Sauvegarder.Size = new System.Drawing.Size(244, 55);
             this.Btn_Sauvegarder.TabIndex = 2;
@@ -482,13 +485,13 @@ namespace PosteTriangle.PL
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.TxtSuivant);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxPosteSuivant);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxPNC);
+            this.Controls.Add(this.checkBoxPC);
             this.Controls.Add(this.TxtNomAtelier);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.pictureBox1);
@@ -542,12 +545,12 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox TxtNomAtelier;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxPC;
+        private System.Windows.Forms.CheckBox checkBoxPNC;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxPosteSuivant;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button TxtSuivant;
     }
 }
