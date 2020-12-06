@@ -57,7 +57,6 @@ namespace PosteTriangle.PL
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Sauvegarder = new System.Windows.Forms.Button();
             this.Btn_Supprimer = new System.Windows.Forms.Button();
-            this.Btn_Performance = new System.Windows.Forms.Button();
             this.BtnOuverture = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TxtTimer = new System.Windows.Forms.TextBox();
@@ -435,7 +434,6 @@ namespace PosteTriangle.PL
             // 
             // Btn_Sauvegarder
             // 
-            this.Btn_Sauvegarder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Sauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Btn_Sauvegarder.FlatAppearance.BorderSize = 0;
             this.Btn_Sauvegarder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -444,7 +442,7 @@ namespace PosteTriangle.PL
             this.Btn_Sauvegarder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Sauvegarder.Image = global::PosteTriangle.Properties.Resources.Actions_list_add_icon;
             this.Btn_Sauvegarder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sauvegarder.Location = new System.Drawing.Point(663, 3);
+            this.Btn_Sauvegarder.Location = new System.Drawing.Point(21, 3);
             this.Btn_Sauvegarder.Name = "Btn_Sauvegarder";
             this.Btn_Sauvegarder.Size = new System.Drawing.Size(244, 55);
             this.Btn_Sauvegarder.TabIndex = 2;
@@ -454,7 +452,7 @@ namespace PosteTriangle.PL
             // 
             // Btn_Supprimer
             // 
-            this.Btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Supprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.Btn_Supprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -463,31 +461,13 @@ namespace PosteTriangle.PL
             this.Btn_Supprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Supprimer.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
             this.Btn_Supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Supprimer.Location = new System.Drawing.Point(348, 553);
+            this.Btn_Supprimer.Location = new System.Drawing.Point(662, 3);
             this.Btn_Supprimer.Name = "Btn_Supprimer";
             this.Btn_Supprimer.Size = new System.Drawing.Size(244, 55);
             this.Btn_Supprimer.TabIndex = 1;
             this.Btn_Supprimer.Text = "       Remise a Zéro";
             this.Btn_Supprimer.UseVisualStyleBackColor = false;
             this.Btn_Supprimer.Click += new System.EventHandler(this.Btn_Supprimer_Click);
-            // 
-            // Btn_Performance
-            // 
-            this.Btn_Performance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.Btn_Performance.FlatAppearance.BorderSize = 0;
-            this.Btn_Performance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btn_Performance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Performance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Performance.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Performance.Image = global::PosteTriangle.Properties.Resources.kpi45;
-            this.Btn_Performance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Performance.Location = new System.Drawing.Point(21, 10);
-            this.Btn_Performance.Name = "Btn_Performance";
-            this.Btn_Performance.Size = new System.Drawing.Size(244, 55);
-            this.Btn_Performance.TabIndex = 0;
-            this.Btn_Performance.Text = "      Performance";
-            this.Btn_Performance.UseVisualStyleBackColor = false;
-            this.Btn_Performance.Click += new System.EventHandler(this.Btn_Commencer_Click);
             // 
             // BtnOuverture
             // 
@@ -562,7 +542,6 @@ namespace PosteTriangle.PL
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Btn_Sauvegarder);
             this.Controls.Add(this.Btn_Supprimer);
-            this.Controls.Add(this.Btn_Performance);
             this.Name = "User_Client_Atelier";
             this.Size = new System.Drawing.Size(929, 625);
             this.Load += new System.EventHandler(this.User_Client_Atelier_Load);
@@ -573,8 +552,6 @@ namespace PosteTriangle.PL
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Btn_Performance;
         private System.Windows.Forms.Button Btn_Supprimer;
         private System.Windows.Forms.Button Btn_Sauvegarder;
         private System.Windows.Forms.Panel panel1;

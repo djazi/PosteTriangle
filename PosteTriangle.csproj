@@ -368,5 +368,11 @@
   <ItemGroup>
     <None Include="Resources\kpi45.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percentage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percentage1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
