@@ -13,6 +13,7 @@ namespace PosteTriangle.PL
    
     public partial class User_Client_Atelier : UserControl
     {
+        
         private static User_Client_Atelier Userclient;
         //Creer un instance pour le usercontrole Atelier 
         public static User_Client_Atelier Instance
@@ -26,7 +27,8 @@ namespace PosteTriangle.PL
                 return Userclient;
             }
         }
-       public User_Client_Atelier()
+        int value;
+        public User_Client_Atelier()
         {
             InitializeComponent();
             
@@ -475,12 +477,19 @@ namespace PosteTriangle.PL
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            if (int.TryParse(TxtTimer.Text, out value))
+            {
+                timer1.Start();
+            }
+            TxtH_Debut.Text = Convert.ToString(0);
+
 
         }
 
         private void BtnFermeture_Click(object sender, EventArgs e)
         {
-
+            timer1.Stop();
+            TxtH_Fin.Text = TxtTimer.Text;
         }
 
         private void comboBoxPosteSuivant_SelectedIndexChanged(object sender, EventArgs e)
@@ -501,6 +510,50 @@ namespace PosteTriangle.PL
             TxtStock_EC.Text = "Stock en Cours";
             TxtTKT_Time.Text = "Takt time";
             comboBoxPosteSuivant.Text = "Poste Suivant";
+            TxtTimer.Text = "0";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TxtTimer.Text = (value++).ToString();
+        }
+
+        private void Btn_Sauvegarder_Click(object sender, EventArgs e)
+        {
+            
+            BL.CDB db = new BL.CDB();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `saisie_poste`( `Nom_Atelier`, `Date`, `Piece_C`, `Piece_NC`, `Effectif`, `TKT`, `H_debut`, `H_fin`, `time`) VALUES (@nm, @dt, @pc, @pnc, @ef, @tkt, @hd, @hf, @t)", db.getConnection());
+
+            // fill table saisie_poste 
+            command.Parameters.Add("@nm", MySqlDbType.VarChar).Value = TxtNomAtelier.Text;
+            command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+            command.Parameters.Add("@pc", MySqlDbType.Int32).Value = TxtP_Conforme.Text;
+            command.Parameters.Add("@pnc", MySqlDbType.Int32).Value = TxtP_N_Conformes.Text;
+            command.Parameters.Add("@tkt", MySqlDbType.Int32).Value = TxtTKT_Time.Text;
+            command.Parameters.Add("@hd", MySqlDbType.Int32).Value = TxtH_Debut.Text;
+            command.Parameters.Add("@hf", MySqlDbType.Int32).Value = TxtH_Fin.Text;
+            command.Parameters.Add("@t", MySqlDbType.Int32).Value = TxtTimer.Text;
+            command.Parameters.Add("@ef", MySqlDbType.Int32).Value = TxtEffectif.Text;
+
+
+            //open the onnection       
+
+            db.openConnection();
+
+            //execute Query
+            if (command.ExecuteNonQuery() == 1 )
+            {
+                MessageBox.Show("Fin de Journeé  MERCI ");
+            }
+            else
+            {
+                MessageBox.Show("Données fin journeé NON enregistrées");
+            }
+
+            //close the connection
+            db.closeConnection();
+
+
         }
     }
 }

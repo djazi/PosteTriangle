@@ -29,6 +29,7 @@ namespace PosteTriangle.PL
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -58,6 +59,8 @@ namespace PosteTriangle.PL
             this.Btn_Supprimer = new System.Windows.Forms.Button();
             this.Btn_Performance = new System.Windows.Forms.Button();
             this.BtnOuverture = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TxtTimer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,7 +214,7 @@ namespace PosteTriangle.PL
             this.TxtStock_EC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStock_EC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStock_EC.ForeColor = System.Drawing.Color.Gray;
-            this.TxtStock_EC.Location = new System.Drawing.Point(359, 499);
+            this.TxtStock_EC.Location = new System.Drawing.Point(394, 441);
             this.TxtStock_EC.Multiline = true;
             this.TxtStock_EC.Name = "TxtStock_EC";
             this.TxtStock_EC.Size = new System.Drawing.Size(220, 27);
@@ -447,6 +450,7 @@ namespace PosteTriangle.PL
             this.Btn_Sauvegarder.TabIndex = 2;
             this.Btn_Sauvegarder.Text = "      Sauvegarder";
             this.Btn_Sauvegarder.UseVisualStyleBackColor = false;
+            this.Btn_Sauvegarder.Click += new System.EventHandler(this.Btn_Sauvegarder_Click);
             // 
             // Btn_Supprimer
             // 
@@ -504,11 +508,32 @@ namespace PosteTriangle.PL
             this.BtnOuverture.UseVisualStyleBackColor = false;
             this.BtnOuverture.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // TxtTimer
+            // 
+            this.TxtTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TxtTimer.BackColor = System.Drawing.Color.LightCyan;
+            this.TxtTimer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtTimer.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTimer.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.TxtTimer.Location = new System.Drawing.Point(394, 499);
+            this.TxtTimer.Multiline = true;
+            this.TxtTimer.Name = "TxtTimer";
+            this.TxtTimer.Size = new System.Drawing.Size(220, 27);
+            this.TxtTimer.TabIndex = 39;
+            this.TxtTimer.Text = "0";
+            this.TxtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // User_Client_Atelier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.TxtTimer);
             this.Controls.Add(this.BtnOuverture);
             this.Controls.Add(this.TxtSuivant);
             this.Controls.Add(this.BtnFermeture);
@@ -578,5 +603,7 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Button BtnFermeture;
         private System.Windows.Forms.Button TxtSuivant;
         private System.Windows.Forms.Button BtnOuverture;
+        private System.Windows.Forms.TextBox TxtTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
