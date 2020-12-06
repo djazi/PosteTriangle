@@ -13,7 +13,9 @@ namespace PosteTriangle.PL
 {
     public partial class User_Client_Affichage : UserControl
     {
-        
+       
+
+
         private static User_Client_Affichage UserAffichage;
         //Creer un instance pour le usercontrole Affichage 
         public static User_Client_Affichage Instance1
@@ -30,10 +32,18 @@ namespace PosteTriangle.PL
         public User_Client_Affichage()
         {
             InitializeComponent();
+
         }
 
         private void User_Client_Affichage_Load(object sender, EventArgs e)
         {
+            // hide labels 
+            labelCT.Visible = false;
+            labelQt.Visible = false;
+            labelSec.Visible = false;
+            labelTC.Visible = false;
+            labelTKTCT.Visible = false;
+            labelTrg.Visible = false;
 
         }
 
@@ -75,16 +85,52 @@ namespace PosteTriangle.PL
             decimal ctr= Math.Round(ct, 2);
             TxtCycleTime.Text = ctr.ToString(); // set cycle time dans TXTBOX
 
+           
 
-
-            decimal tkct = (int.Parse(tk)-ct); //calcule de TKTvsCT
+            decimal tkct = Math.Abs(int.Parse(tk)-ct); //calcule de TKTvsCT
             decimal tktctr= Math.Round(tkct, 2);
-            TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
+
+            if (tktctr <= 3)
+            {
+                TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
+                TxtPer_TKTCT.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
+                TxtPer_TKTCT.ForeColor = Color.Crimson;
+
+            }
+
+
+
+
+
 
 
             decimal Trg = (decimal) (int.Parse(v) * ct)*100 / 1207;  // calcule TRG
             decimal Trgr = Math.Round(Trg, 2); // round with two number
-            TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
+
+            if (Trgr >= 70)
+            {
+                TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
+                TxtPer_TRG.ForeColor = Color.DarkGreen;
+
+
+
+
+            }
+            else
+            {
+                TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
+                TxtPer_TRG.ForeColor = Color.Crimson;
+
+            }
+
+
+
+
+
 
 
 
@@ -92,7 +138,30 @@ namespace PosteTriangle.PL
 
             decimal tc = (decimal)  (int.Parse(v)*100/sum); // calcule TC
             decimal tcr = Math.Round(tc, 2); // round with two number
-            TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
+            if (tcr > 80)
+            {
+                TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
+                
+                TxtPer_TauxConfor.ForeColor = Color.DarkGreen;
+               
+
+            } else
+            {
+                TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
+
+                TxtPer_TauxConfor.ForeColor = Color.Crimson;
+            }
+
+
+
+
+
+
+
+
+
+
+
 
             //close the connection
             db.closeConnection();
@@ -106,11 +175,37 @@ namespace PosteTriangle.PL
             MySqlDataAdapter asdf1 = new MySqlDataAdapter("SELECT * from stock_poste WHERE Date = '" + TxtDate.Text + "'", db.getConnection());
             DataTable ss1 = new DataTable();
             asdf1.Fill(ss1);
-            TxtPer_StockEC_Atelier.Text= ss1.Rows[0][5].ToString(); // a modifier pour chaque poste 
+            string s = ss1.Rows[0][5].ToString(); // a modifier pour chaque poste 
+            if(int.Parse(s)<=4)
+            {
+                TxtPer_StockEC_Atelier.Text = s.ToString();
+                TxtPer_StockEC_Atelier.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                TxtPer_StockEC_Atelier.Text = s.ToString();
+                TxtPer_StockEC_Atelier.ForeColor = Color.Crimson;
+
+            }
+
 
 
 
             db.closeConnection();
+
+
+
+
+
+
+            //show labels 
+             
+            labelCT.Visible = true;
+            labelQt.Visible = true;
+            labelSec.Visible = true;
+            labelTC.Visible = true;
+            labelTKTCT.Visible = true;
+            labelTrg.Visible = true;
 
 
 

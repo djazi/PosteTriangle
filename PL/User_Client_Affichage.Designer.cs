@@ -49,6 +49,12 @@ namespace PosteTriangle.PL
             this.Btn_Performance = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelCT = new System.Windows.Forms.Label();
+            this.labelTrg = new System.Windows.Forms.Label();
+            this.labelTC = new System.Windows.Forms.Label();
+            this.labelTKTCT = new System.Windows.Forms.Label();
+            this.labelQt = new System.Windows.Forms.Label();
+            this.labelSec = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -295,11 +301,93 @@ namespace PosteTriangle.PL
             this.button2.TabIndex = 17;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // labelCT
+            // 
+            this.labelCT.AutoSize = true;
+            this.labelCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCT.ForeColor = System.Drawing.Color.Gray;
+            this.labelCT.Location = new System.Drawing.Point(93, 130);
+            this.labelCT.Name = "labelCT";
+            this.labelCT.Size = new System.Drawing.Size(40, 25);
+            this.labelCT.TabIndex = 18;
+            this.labelCT.Text = "CT";
+            this.labelCT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTrg
+            // 
+            this.labelTrg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTrg.AutoSize = true;
+            this.labelTrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrg.ForeColor = System.Drawing.Color.Gray;
+            this.labelTrg.Location = new System.Drawing.Point(551, 195);
+            this.labelTrg.Name = "labelTrg";
+            this.labelTrg.Size = new System.Drawing.Size(56, 25);
+            this.labelTrg.TabIndex = 19;
+            this.labelTrg.Text = "TRG";
+            this.labelTrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTC
+            // 
+            this.labelTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTC.AutoSize = true;
+            this.labelTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTC.ForeColor = System.Drawing.Color.Gray;
+            this.labelTC.Location = new System.Drawing.Point(379, 195);
+            this.labelTC.Name = "labelTC";
+            this.labelTC.Size = new System.Drawing.Size(46, 25);
+            this.labelTC.TabIndex = 20;
+            this.labelTC.Text = "%C";
+            this.labelTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTKTCT
+            // 
+            this.labelTKTCT.AutoSize = true;
+            this.labelTKTCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTKTCT.ForeColor = System.Drawing.Color.Gray;
+            this.labelTKTCT.Location = new System.Drawing.Point(53, 195);
+            this.labelTKTCT.Name = "labelTKTCT";
+            this.labelTKTCT.Size = new System.Drawing.Size(102, 25);
+            this.labelTKTCT.TabIndex = 21;
+            this.labelTKTCT.Text = "TKTvsCT";
+            this.labelTKTCT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelQt
+            // 
+            this.labelQt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelQt.AutoSize = true;
+            this.labelQt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQt.ForeColor = System.Drawing.Color.Gray;
+            this.labelQt.Location = new System.Drawing.Point(791, 130);
+            this.labelQt.Name = "labelQt";
+            this.labelQt.Size = new System.Drawing.Size(41, 25);
+            this.labelQt.TabIndex = 22;
+            this.labelQt.Text = "QT";
+            this.labelQt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSec
+            // 
+            this.labelSec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSec.AutoSize = true;
+            this.labelSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSec.ForeColor = System.Drawing.Color.Gray;
+            this.labelSec.Location = new System.Drawing.Point(777, 195);
+            this.labelSec.Name = "labelSec";
+            this.labelSec.Size = new System.Drawing.Size(55, 25);
+            this.labelSec.TabIndex = 23;
+            this.labelSec.Text = "SEC";
+            this.labelSec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // User_Client_Affichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.labelSec);
+            this.Controls.Add(this.labelQt);
+            this.Controls.Add(this.labelTKTCT);
+            this.Controls.Add(this.labelTC);
+            this.Controls.Add(this.labelTrg);
+            this.Controls.Add(this.labelCT);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnSuvegarderp);
@@ -347,5 +435,11 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Button BtnSuvegarderp;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelCT;
+        private System.Windows.Forms.Label labelTrg;
+        private System.Windows.Forms.Label labelTC;
+        private System.Windows.Forms.Label labelTKTCT;
+        private System.Windows.Forms.Label labelQt;
+        private System.Windows.Forms.Label labelSec;
     }
 }
