@@ -39,7 +39,7 @@ namespace PosteTriangle.PL
 
         private void User_Client_Atelier_Load(object sender, EventArgs e)
         {
-
+           
         }
 
      
@@ -484,6 +484,12 @@ namespace PosteTriangle.PL
             }
             TxtH_Debut.Text = Convert.ToString(0);
 
+            timer2.Start();
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 3000;
+            timer.Tick += new EventHandler(timer2_Tick);
+            
+
 
         }
 
@@ -555,6 +561,11 @@ namespace PosteTriangle.PL
             db.closeConnection();
 
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            button1.PerformClick();
         }
     }
 }

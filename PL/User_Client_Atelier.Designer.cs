@@ -60,6 +60,7 @@ namespace PosteTriangle.PL
             this.BtnOuverture = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TxtTimer = new System.Windows.Forms.TextBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -508,6 +509,11 @@ namespace PosteTriangle.PL
             this.TxtTimer.Text = "0";
             this.TxtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 3000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // User_Client_Atelier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,5 +588,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Button BtnOuverture;
         private System.Windows.Forms.TextBox TxtTimer;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
