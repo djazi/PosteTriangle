@@ -271,5 +271,10 @@ namespace PosteTriangle.PL
             db.closeConnection();
 
         }
+
+        private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
     }
 }
