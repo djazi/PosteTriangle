@@ -59,157 +59,167 @@ namespace PosteTriangle.PL
 
         private void Btn_Performance_Click(object sender, EventArgs e)
         {
-            BL.CDB db = new BL.CDB();
-            db.openConnection();
-            
-         
-            
-            
-
-            // a modifer pour chaque Poste 
-
-            MySqlDataAdapter asdf = new MySqlDataAdapter("SELECT * from saisie_poste WHERE Date = '" + TxtDate.Text + "'", db.getConnection());
-            DataTable ss = new DataTable();
-            asdf.Fill(ss);
-            TxtNomAtelier.Text = ss.Rows[0][1].ToString();
-             string v= ss.Rows[0][3].ToString(); // get PC from saisie_poste
-            string w = ss.Rows[0][4].ToString();//get PNC from saisie_poste
-            string tk= ss.Rows[0][6].ToString();// get TKT from saisie_poste
-
-            int sum = int.Parse(w) + int.Parse(v); //calcule de la QT 
-            TxtQteProduite.Text = sum.ToString(); //set QT dans TXTBOX
-
-            string t = ss.Rows[0][9].ToString(); // get time from saisie_poste
-
-            decimal ct = (decimal) int.Parse(t) /(sum); // calcule de cycle time
-            decimal ctr= Math.Round(ct, 2);
-            TxtCycleTime.Text = ctr.ToString(); // set cycle time dans TXTBOX
-
-           
-
-            decimal tkct = Math.Abs(int.Parse(tk)-ct); //calcule de TKTvsCT
-            decimal tktctr= Math.Round(tkct, 2);
-
-            if (tktctr <= 3)
+            if (TxtDate.Text== "Date")
             {
-                TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
-                TxtPer_TKTCT.ForeColor = Color.DarkGreen;
+                MessageBox.Show("Entrer la Date d'aujourd'hui d'abord et cliquer sur le button Performance  ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+
             else
             {
-                TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
-                TxtPer_TKTCT.ForeColor = Color.Crimson;
+
+
+                BL.CDB db = new BL.CDB();
+                db.openConnection();
+
+
+
+
+
+                // a modifer pour chaque Poste 
+
+                MySqlDataAdapter asdf = new MySqlDataAdapter("SELECT * from saisie_poste WHERE Date = '" + TxtDate.Text + "' AND Nom_Atelier='Triangle'", db.getConnection());
+                DataTable ss = new DataTable();
+                asdf.Fill(ss);
+                TxtNomAtelier.Text = ss.Rows[0][1].ToString();
+                string v = ss.Rows[0][3].ToString(); // get PC from saisie_poste
+                string w = ss.Rows[0][4].ToString();//get PNC from saisie_poste
+                string tk = ss.Rows[0][6].ToString();// get TKT from saisie_poste
+
+                int sum = int.Parse(w) + int.Parse(v); //calcule de la QT 
+                TxtQteProduite.Text = sum.ToString(); //set QT dans TXTBOX
+
+                string t = ss.Rows[0][9].ToString(); // get time from saisie_poste
+
+                decimal ct = (decimal)int.Parse(t) / (sum); // calcule de cycle time
+                decimal ctr = Math.Round(ct, 2);
+                TxtCycleTime.Text = ctr.ToString(); // set cycle time dans TXTBOX
+
+
+
+                decimal tkct = Math.Abs(int.Parse(tk) - ct); //calcule de TKTvsCT
+                decimal tktctr = Math.Round(tkct, 2);
+
+                if (tktctr <= 3)
+                {
+                    TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
+                    TxtPer_TKTCT.ForeColor = Color.DarkGreen;
+                }
+                else
+                {
+                    TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
+                    TxtPer_TKTCT.ForeColor = Color.Crimson;
+
+                }
+
+
+
+
+
+
+
+                decimal Trg = (decimal)(int.Parse(v) * ct) * 100 / 1207;  // calcule TRG
+                decimal Trgr = Math.Round(Trg, 2); // round with two number
+
+                if (Trgr >= 70)
+                {
+                    TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
+                    TxtPer_TRG.ForeColor = Color.DarkGreen;
+
+
+
+
+                }
+                else
+                {
+                    TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
+                    TxtPer_TRG.ForeColor = Color.Crimson;
+
+                }
+
+
+
+
+
+
+
+
+
+
+                decimal tc = (decimal)(int.Parse(v) * 100 / sum); // calcule TC
+                decimal tcr = Math.Round(tc, 2); // round with two number
+                if (tcr > 80)
+                {
+                    TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
+
+                    TxtPer_TauxConfor.ForeColor = Color.DarkGreen;
+
+
+                } else
+                {
+                    TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
+
+                    TxtPer_TauxConfor.ForeColor = Color.Crimson;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+                //close the connection
+                db.closeConnection();
+
+
+
+                db.openConnection();
+
+                // get valeur de stock triangle 
+
+                MySqlDataAdapter asdf1 = new MySqlDataAdapter("SELECT * from stock_poste WHERE Date = '" + TxtDate.Text + "'", db.getConnection());
+                DataTable ss1 = new DataTable();
+                asdf1.Fill(ss1);
+                string s = ss1.Rows[0][5].ToString(); // a modifier pour chaque poste 
+                if (int.Parse(s) <= 4)
+                {
+                    TxtPer_StockEC_Atelier.Text = s.ToString();
+                    TxtPer_StockEC_Atelier.ForeColor = Color.DarkGreen;
+                }
+                else
+                {
+                    TxtPer_StockEC_Atelier.Text = s.ToString();
+                    TxtPer_StockEC_Atelier.ForeColor = Color.Crimson;
+
+                }
+
+
+
+
+                db.closeConnection();
+
+
+
+
+
+
+                //show labels 
+
+                labelCT.Visible = true;
+                labelQt.Visible = true;
+                labelSec.Visible = true;
+                labelTC.Visible = true;
+                labelTKTCT.Visible = true;
+                labelTrg.Visible = true;
+
+
 
             }
-
-
-
-
-
-
-
-            decimal Trg = (decimal) (int.Parse(v) * ct)*100 / 1207;  // calcule TRG
-            decimal Trgr = Math.Round(Trg, 2); // round with two number
-
-            if (Trgr >= 70)
-            {
-                TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
-                TxtPer_TRG.ForeColor = Color.DarkGreen;
-
-
-
-
-            }
-            else
-            {
-                TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
-                TxtPer_TRG.ForeColor = Color.Crimson;
-
-            }
-
-
-
-
-
-
-
-
-
-
-            decimal tc = (decimal)  (int.Parse(v)*100/sum); // calcule TC
-            decimal tcr = Math.Round(tc, 2); // round with two number
-            if (tcr > 80)
-            {
-                TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
-                
-                TxtPer_TauxConfor.ForeColor = Color.DarkGreen;
-               
-
-            } else
-            {
-                TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
-
-                TxtPer_TauxConfor.ForeColor = Color.Crimson;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-            //close the connection
-            db.closeConnection();
-
-
-
-            db.openConnection();
-
-            // get valeur de stock triangle 
-
-            MySqlDataAdapter asdf1 = new MySqlDataAdapter("SELECT * from stock_poste WHERE Date = '" + TxtDate.Text + "'", db.getConnection());
-            DataTable ss1 = new DataTable();
-            asdf1.Fill(ss1);
-            string s = ss1.Rows[0][5].ToString(); // a modifier pour chaque poste 
-            if(int.Parse(s)<=4)
-            {
-                TxtPer_StockEC_Atelier.Text = s.ToString();
-                TxtPer_StockEC_Atelier.ForeColor = Color.DarkGreen;
-            }
-            else
-            {
-                TxtPer_StockEC_Atelier.Text = s.ToString();
-                TxtPer_StockEC_Atelier.ForeColor = Color.Crimson;
-
-            }
-
-
-
-
-            db.closeConnection();
-
-
-
-
-
-
-            //show labels 
-             
-            labelCT.Visible = true;
-            labelQt.Visible = true;
-            labelSec.Visible = true;
-            labelTC.Visible = true;
-            labelTKTCT.Visible = true;
-            labelTrg.Visible = true;
-
-
-
-
 
 
         }
@@ -238,37 +248,54 @@ namespace PosteTriangle.PL
 
         private void BtnSuvegarderp_Click(object sender, EventArgs e)
         {
-            BL.CDB db = new BL.CDB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `affichage_poste`(`Date`, `Stock`, `TRG`, `Taux_conformité`, `Cycle_Time`, `TKT_VS_CT`, `Nom_Atelier`) VALUES (@dt, @st, @trg, @tc, @ct, @tktct, @nat)", db.getConnection());
-
-            // fill table affichage_poste    
-            command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
-            command.Parameters.Add("@st", MySqlDbType.VarChar).Value = TxtPer_StockEC_Atelier.Text;
-            command.Parameters.Add("@trg", MySqlDbType.VarChar).Value = TxtPer_TRG.Text;
-            command.Parameters.Add("@tc", MySqlDbType.VarChar).Value = TxtPer_TauxConfor.Text;
-            command.Parameters.Add("@ct", MySqlDbType.VarChar).Value = TxtCycleTime.Text;
-            command.Parameters.Add("@tktct", MySqlDbType.VarChar).Value = TxtPer_TKTCT.Text;
-            command.Parameters.Add("@nat", MySqlDbType.VarChar).Value = TxtNomAtelier.Text;
-            
-
-
-
-            //open the onnection       
-
-            db.openConnection();
-
-            //execute Query
-            if (command.ExecuteNonQuery() == 1)
+            try
             {
-                MessageBox.Show("Données de votre poste est transférée au poste Pilote ");
-            }
-            else
-            {
-                MessageBox.Show("Données NON enregistrées");
-            }
+                if (TxtPer_TRG.Text == "TRG ")
+                {
+                    MessageBox.Show("cliquer sur le button Performance ET vérifier si les champs sont remplis", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
 
-            //close the connection
-            db.closeConnection();
+
+
+                    BL.CDB db = new BL.CDB();
+                    MySqlCommand command = new MySqlCommand("INSERT INTO `affichage_poste`(`Date`, `Stock`, `TRG`, `Taux_conformité`, `Cycle_Time`, `TKT_VS_CT`, `Nom_Atelier`) VALUES (@dt, @st, @trg, @tc, @ct, @tktct, @nat)", db.getConnection());
+
+                    // fill table affichage_poste    
+                    command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
+                    command.Parameters.Add("@st", MySqlDbType.VarChar).Value = TxtPer_StockEC_Atelier.Text;
+                    command.Parameters.Add("@trg", MySqlDbType.VarChar).Value = TxtPer_TRG.Text;
+                    command.Parameters.Add("@tc", MySqlDbType.VarChar).Value = TxtPer_TauxConfor.Text;
+                    command.Parameters.Add("@ct", MySqlDbType.VarChar).Value = TxtCycleTime.Text;
+                    command.Parameters.Add("@tktct", MySqlDbType.VarChar).Value = TxtPer_TKTCT.Text;
+                    command.Parameters.Add("@nat", MySqlDbType.VarChar).Value = TxtNomAtelier.Text;
+
+
+
+
+                    //open the onnection       
+
+                    db.openConnection();
+
+                    //execute Query
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Données de votre poste est transférée au poste Pilote ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Données NON enregistrées");
+                    }
+
+                    //close the connection
+                    db.closeConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("vérifier si les champs sont remplis ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

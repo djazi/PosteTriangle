@@ -61,6 +61,7 @@ namespace PosteTriangle.PL
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TxtTimer = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,6 +222,7 @@ namespace PosteTriangle.PL
             this.TxtStock_EC.TabIndex = 23;
             this.TxtStock_EC.Text = "Stock en Cours";
             this.TxtStock_EC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtStock_EC.TextChanged += new System.EventHandler(this.TxtStock_EC_TextChanged);
             this.TxtStock_EC.Enter += new System.EventHandler(this.TxtStock_EC_Enter);
             this.TxtStock_EC.Leave += new System.EventHandler(this.TxtStock_EC_Leave);
             // 
@@ -331,6 +333,7 @@ namespace PosteTriangle.PL
             this.checkBoxPNC.TabIndex = 32;
             this.checkBoxPNC.Text = "PNC";
             this.checkBoxPNC.UseVisualStyleBackColor = true;
+            this.checkBoxPNC.CheckedChanged += new System.EventHandler(this.checkBoxPNC_CheckedChanged);
             // 
             // label1
             // 
@@ -514,11 +517,34 @@ namespace PosteTriangle.PL
             this.timer2.Interval = 3000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "PncCroix",
+            "PncEtoile",
+            "PncOvale",
+            "PncRect",
+            "PncTriangle",
+            "PncVague",
+            "PncPF"});
+            this.comboBox1.Location = new System.Drawing.Point(687, 187);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(220, 32);
+            this.comboBox1.TabIndex = 40;
+            this.comboBox1.Text = "Poste Suivant ";
+            // 
             // User_Client_Atelier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TxtTimer);
             this.Controls.Add(this.BtnOuverture);
             this.Controls.Add(this.TxtSuivant);
@@ -589,5 +615,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.TextBox TxtTimer;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
