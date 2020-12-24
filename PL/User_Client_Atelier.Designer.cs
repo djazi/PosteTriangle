@@ -54,7 +54,6 @@ namespace PosteTriangle.PL
             this.TxtSuivant = new System.Windows.Forms.Button();
             this.BtnFermeture = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Sauvegarder = new System.Windows.Forms.Button();
             this.Btn_Supprimer = new System.Windows.Forms.Button();
             this.BtnOuverture = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@ namespace PosteTriangle.PL
             this.TxtTimer = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -426,16 +425,6 @@ namespace PosteTriangle.PL
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::PosteTriangle.Properties.Resources.caution;
-            this.pictureBox1.Location = new System.Drawing.Point(462, 118);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 35);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // Btn_Sauvegarder
             // 
             this.Btn_Sauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -539,11 +528,29 @@ namespace PosteTriangle.PL
             this.comboBox1.TabIndex = 40;
             this.comboBox1.Text = "Poste Suivant ";
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.Color.LightCyan;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Image = global::PosteTriangle.Properties.Resources.caution;
+            this.button2.Location = new System.Drawing.Point(456, 119);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(39, 37);
+            this.button2.TabIndex = 41;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // User_Client_Atelier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TxtTimer);
             this.Controls.Add(this.BtnOuverture);
@@ -556,7 +563,6 @@ namespace PosteTriangle.PL
             this.Controls.Add(this.checkBoxPC);
             this.Controls.Add(this.TxtNomAtelier);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TxtStock_EC);
             this.Controls.Add(this.TxtEffectif);
             this.Controls.Add(this.TxtP_Conforme);
@@ -577,7 +583,6 @@ namespace PosteTriangle.PL
             this.Name = "User_Client_Atelier";
             this.Size = new System.Drawing.Size(929, 625);
             this.Load += new System.EventHandler(this.User_Client_Atelier_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,7 +606,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.TextBox TxtEffectif;
         private System.Windows.Forms.TextBox TxtP_Conforme;
         private System.Windows.Forms.TextBox TxtP_N_Conformes;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox TxtNomAtelier;
         private System.Windows.Forms.CheckBox checkBoxPC;
@@ -616,5 +620,6 @@ namespace PosteTriangle.PL
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

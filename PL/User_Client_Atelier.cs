@@ -626,7 +626,7 @@ namespace PosteTriangle.PL
                     {
                         timer1.Start();
                     }
-                    TxtH_Debut.Text = Convert.ToString(0);
+                    TxtH_Debut.Text = DateTime.Now.ToString("HH:mm:ss");
 
                     timer2.Start();
                     System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
@@ -649,7 +649,7 @@ namespace PosteTriangle.PL
                 else
                 {
                     timer1.Stop();
-                    TxtH_Fin.Text = TxtTimer.Text;
+                    TxtH_Fin.Text = DateTime.Now.ToString("HH:mm:ss"); ;
                 }
             }
 
@@ -710,8 +710,8 @@ namespace PosteTriangle.PL
                 command.Parameters.Add("@pc", MySqlDbType.Int32).Value = TxtP_Conforme.Text;
                 command.Parameters.Add("@pnc", MySqlDbType.Int32).Value = TxtP_N_Conformes.Text;
                 command.Parameters.Add("@tkt", MySqlDbType.Int32).Value = TxtTKT_Time.Text;
-                command.Parameters.Add("@hd", MySqlDbType.Int32).Value = TxtH_Debut.Text;
-                command.Parameters.Add("@hf", MySqlDbType.Int32).Value = TxtH_Fin.Text;
+                command.Parameters.Add("@hd", MySqlDbType.VarChar).Value = TxtH_Debut.Text;
+                command.Parameters.Add("@hf", MySqlDbType.VarChar).Value = TxtH_Fin.Text;
                 command.Parameters.Add("@t", MySqlDbType.Int32).Value = TxtTimer.Text;
                 command.Parameters.Add("@ef", MySqlDbType.Int32).Value = TxtEffectif.Text;
 
@@ -770,6 +770,11 @@ namespace PosteTriangle.PL
 
             comboBox1.Visible = true;
             comboBoxPosteSuivant.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer2.Stop();
         }
     }
 }

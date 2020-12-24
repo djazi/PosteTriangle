@@ -133,6 +133,16 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bad_review {
+            get {
+                object obj = ResourceManager.GetObject("bad-review", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Delete_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Delete-icon", resourceCulture);
@@ -576,6 +586,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap Pictures_icon {
             get {
                 object obj = ResourceManager.GetObject("Pictures-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap positive_vote {
+            get {
+                object obj = ResourceManager.GetObject("positive-vote", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

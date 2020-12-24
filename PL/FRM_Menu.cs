@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace PosteTriangle.PL
 {
     public partial class FRM_Menu : Form
@@ -118,6 +119,9 @@ namespace PosteTriangle.PL
         private void BtnGuide_Click(object sender, EventArgs e)
         {
             pnlbut.Top = BtnGuide.Top;
+            System.Diagnostics.Process.Start("c:\\Users\\khalis\\Desktop\\visual studio projects\\Icon\\Icon\\Khalid DJAZI Ouissal ALLAM.pptx");
+
+
         }
 
         private void BtnParametre_Click(object sender, EventArgs e)

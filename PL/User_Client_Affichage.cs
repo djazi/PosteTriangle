@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PosteTriangle.PL
 {
@@ -32,6 +33,8 @@ namespace PosteTriangle.PL
         public User_Client_Affichage()
         {
             InitializeComponent();
+           
+
 
         }
 
@@ -44,8 +47,27 @@ namespace PosteTriangle.PL
             labelTC.Visible = false;
             labelTKTCT.Visible = false;
             labelTrg.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
 
+            solidGaugeTRG.Visible = false;
+            label3.Visible = false;
+            solidGaugeTC.Visible = false;
+            label2.Visible = false;
+            chart1.Visible = false;
         }
+        
+
+
+
+
+
 
         private void TxtPer_LT_Enter(object sender, EventArgs e)
         {
@@ -59,6 +81,12 @@ namespace PosteTriangle.PL
 
         private void Btn_Performance_Click(object sender, EventArgs e)
         {
+            solidGaugeTRG.Visible = true;
+            label3.Visible = true;
+            solidGaugeTC.Visible = true;
+            label2.Visible = true;
+            chart1.Visible = true;
+
             if (TxtDate.Text== "Date")
             {
                 MessageBox.Show("Entrer la Date d'aujourd'hui d'abord et cliquer sur le button Performance  ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -72,7 +100,7 @@ namespace PosteTriangle.PL
                 BL.CDB db = new BL.CDB();
                 db.openConnection();
 
-
+             
 
 
 
@@ -104,11 +132,13 @@ namespace PosteTriangle.PL
                 {
                     TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
                     TxtPer_TKTCT.ForeColor = Color.DarkGreen;
+                    button3.Visible = true;
                 }
                 else
                 {
                     TxtPer_TKTCT.Text = tktctr.ToString(); //set TKTCT dans txtbox
                     TxtPer_TKTCT.ForeColor = Color.Crimson;
+                    button4.Visible = true;
 
                 }
 
@@ -121,10 +151,19 @@ namespace PosteTriangle.PL
                 decimal Trg = (decimal)(int.Parse(v) * ct) * 100 / 1207;  // calcule TRG
                 decimal Trgr = Math.Round(Trg, 2); // round with two number
 
+                solidGaugeTRG.Uses360Mode = false;
+                solidGaugeTRG.From = 0;
+                solidGaugeTRG.To = 100;
+                solidGaugeTRG.Value = (double)(decimal)Trgr;
+                
+
                 if (Trgr >= 70)
                 {
                     TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
                     TxtPer_TRG.ForeColor = Color.DarkGreen;
+                    button8.Visible = true;
+                    
+
 
 
 
@@ -134,6 +173,7 @@ namespace PosteTriangle.PL
                 {
                     TxtPer_TRG.Text = Trgr.ToString(); //  set %TRG to TXTBOX
                     TxtPer_TRG.ForeColor = Color.Crimson;
+                    button7.Visible = true;
 
                 }
 
@@ -148,11 +188,21 @@ namespace PosteTriangle.PL
 
                 decimal tc = (decimal)(int.Parse(v) * 100 / sum); // calcule TC
                 decimal tcr = Math.Round(tc, 2); // round with two number
+
+                solidGaugeTC.Uses360Mode = false;
+                solidGaugeTC.From = 0;
+                solidGaugeTC.To = 100;
+                solidGaugeTC.Value = (double)(decimal)tcr;
+
+
+
+
                 if (tcr > 80)
                 {
                     TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
 
                     TxtPer_TauxConfor.ForeColor = Color.DarkGreen;
+                    button6.Visible = true;
 
 
                 } else
@@ -160,7 +210,11 @@ namespace PosteTriangle.PL
                     TxtPer_TauxConfor.Text = tcr.ToString(); // set %CONFORMITe to TXTBOX
 
                     TxtPer_TauxConfor.ForeColor = Color.Crimson;
+                    button5.Visible = true;
                 }
+                
+                
+                
 
 
 
@@ -190,19 +244,50 @@ namespace PosteTriangle.PL
                 {
                     TxtPer_StockEC_Atelier.Text = s.ToString();
                     TxtPer_StockEC_Atelier.ForeColor = Color.DarkGreen;
+                    button10.Visible = true;
                 }
                 else
                 {
                     TxtPer_StockEC_Atelier.Text = s.ToString();
                     TxtPer_StockEC_Atelier.ForeColor = Color.Crimson;
+                    button9.Visible = true;
 
                 }
+                //--------------------------------------------------------------------------------------------------------------------
+                MySqlDataAdapter asdf2 = new MySqlDataAdapter("SELECT Striangle ,Date from stock_poste ", db.getConnection());
+                DataSet ds = new DataSet();
+
+                asdf2.Fill(ds, "Striangle");
+                chart1.DataSource = ds.Tables["Striangle"];
+                Series series1 = chart1.Series["Series1"];
+                series1.ChartType = SeriesChartType.Column;
+
+                series1.Name = "Stock Poste Triangle";
+
+                var chart = chart1;
+                chart.Series[series1.Name].XValueMember = "Date";
+                chart.Series[series1.Name].YValueMembers = "Striangle";
+
+                chart.Series[0].IsValueShownAsLabel = true;
+                chart.Series[0]["pieLabelStyle"] = "outside";
+                chart.Series[0].BorderWidth = 1;
+                chart.Series[0].BorderColor = Color.Black;
+                chart.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+
+
+
+
+
+
+
+
 
 
 
 
                 db.closeConnection();
-
+                
 
 
 
@@ -300,6 +385,21 @@ namespace PosteTriangle.PL
         }
 
         private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void solidGaugeTC_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
         }
