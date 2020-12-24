@@ -4,6 +4,15 @@ poste triangle projets 5
           
 ![triangle-design-png-100-images-in-collection-page-2-triangle-design-png-338_338](https://user-images.githubusercontent.com/52473469/103102218-593a8200-461b-11eb-9957-675d1791e6da.jpg)
 
+![image](https://user-images.githubusercontent.com/52473469/103103809-01ecdf80-4624-11eb-8d03-775b191149d6.png)
+
+![image](https://user-images.githubusercontent.com/52473469/103103821-1b8e2700-4624-11eb-9712-a65a0f88303d.png)
+![image](https://user-images.githubusercontent.com/52473469/103103829-22b53500-4624-11eb-83db-f20dce5ccf7c.png)
+![image](https://user-images.githubusercontent.com/52473469/103103834-29dc4300-4624-11eb-91b6-4cd975e1dee7.png)
+![image](https://user-images.githubusercontent.com/52473469/103103841-2fd22400-4624-11eb-894c-ca64ee9e6dbd.png)
+
+
+
 # download projets .zip et la BD 
 ouvrir visual studio --->  ouvrir un project ou solution ------->selection la solution ------>ouvrir xampp et importer DB
 # changement pour les autres Postes 
