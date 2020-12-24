@@ -1,5 +1,12 @@
-# PosteTriangle
-poste triangle projets 5 
+# Mise en oeuvre des cellules flexibles 
+
+# description du projet
+Dans le cadre d’un projet Lean 4.0 qui a comme principe fondamentale « Le processus
+d’amélioration continue » et qui permet de créer le maximum de valeur tout en consommant
+le minimum de ressources, la mise en place d’une architecture SI est la première phase du
+développement décisionnel, avec pour objectif de rendre visible dans des états, l’information
+stockée dans des bases de données (output des chaines de production).
+
 
           
 ![triangle-design-png-100-images-in-collection-page-2-triangle-design-png-338_338](https://user-images.githubusercontent.com/52473469/103102218-593a8200-461b-11eb-9957-675d1791e6da.jpg)
