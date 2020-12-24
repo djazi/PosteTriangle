@@ -403,5 +403,15 @@ namespace PosteTriangle.PL
         {
 
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("c:\\Users\\khalis\\Desktop\\visual studio projects\\KPI visualizations.pbix");
+        }
     }
 }

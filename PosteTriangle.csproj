@@ -136,6 +136,12 @@
     <Compile Include="PL\User_Client_Atelier.Designer.cs">
       <DependentUpon>User_Client_Atelier.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_Client_Recherche.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\User_Client_Recherche.Designer.cs">
+      <DependentUpon>User_Client_Recherche.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\FRM_Connexion.resx">
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\User_Client_Atelier.resx">
       <DependentUpon>User_Client_Atelier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_Client_Recherche.resx">
+      <DependentUpon>User_Client_Recherche.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -401,6 +410,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-power-bi-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-power-bi-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

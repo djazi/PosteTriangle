@@ -383,6 +383,26 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_power_bi_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-power-bi-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_power_bi_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-power-bi-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imprimer {
             get {
                 object obj = ResourceManager.GetObject("Imprimer", resourceCulture);
@@ -546,6 +566,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap Office_Client_Male_Light_icon {
             get {
                 object obj = ResourceManager.GetObject("Office-Client-Male-Light-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB {
+            get {
+                object obj = ResourceManager.GetObject("PB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -76,6 +76,20 @@ namespace PosteTriangle.PL
         private void BtnRechercher_Click(object sender, EventArgs e)
         {
             pnlbut.Top = BtnRechercher.Top;
+            if (!pnlfirst.Controls.Contains(User_Client_Recherche.Instance2))
+            {
+                pnlfirst.Controls.Add(User_Client_Recherche.Instance2);
+                User_Client_Recherche.Instance2.Dock = DockStyle.Fill;
+                User_Client_Recherche.Instance2.BringToFront();
+
+
+
+            }
+            else
+            {
+                User_Client_Recherche.Instance2.BringToFront();
+
+            }
         }
 
         private void BtnPerformance_Click(object sender, EventArgs e)
