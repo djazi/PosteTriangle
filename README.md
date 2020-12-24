@@ -35,7 +35,6 @@ changer  dans la ligne 350 "Striangle" Par ---> Scroix ou Setoile ou Sovale ou S
 changer  dans la ligne 582  "Triangle" par Croix, Vague,Etoile,Ovale,Rect                                                                                                          
 dans la ligne 584 changer "16" par le TKTime de votre poste 												
  et dans la ligne 594 changer [0][5] par  nbr col de votre poste  												croix [0][1] etoile [0][2]  ovale [0][3] rect [0][4] vague [0][6] 																			                                                                                                                         
- 
  #changement dans la forme d'Affichage 
  
  ![image](https://user-images.githubusercontent.com/52473469/103103026-3f02a300-461f-11eb-9b57-8168b1772714.png)
