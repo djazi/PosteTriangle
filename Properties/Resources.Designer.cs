@@ -573,6 +573,16 @@ namespace PosteTriangle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap packages {
+            get {
+                object obj = ResourceManager.GetObject("packages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PB {
             get {
                 object obj = ResourceManager.GetObject("PB", resourceCulture);
@@ -646,6 +656,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap product_32 {
             get {
                 object obj = ResourceManager.GetObject("product_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap production {
+            get {
+                object obj = ResourceManager.GetObject("production", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -776,6 +796,16 @@ namespace PosteTriangle.Properties {
         internal static System.Drawing.Bitmap speedometer {
             get {
                 object obj = ResourceManager.GetObject("speedometer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap speedometer1 {
+            get {
+                object obj = ResourceManager.GetObject("speedometer1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

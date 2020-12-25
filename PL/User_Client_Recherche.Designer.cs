@@ -29,128 +29,135 @@ namespace PosteTriangle.PL
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtDate = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_Supprimer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewStock = new System.Windows.Forms.DataGridView();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnPerform = new System.Windows.Forms.Button();
+            this.btnProd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TxtDate
-            // 
-            this.TxtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDate.BackColor = System.Drawing.Color.LightCyan;
-            this.TxtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDate.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDate.ForeColor = System.Drawing.Color.Gray;
-            this.TxtDate.Location = new System.Drawing.Point(688, 49);
-            this.TxtDate.Multiline = true;
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(220, 27);
-            this.TxtDate.TabIndex = 21;
-            this.TxtDate.Text = "Date";
-            this.TxtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.panel1.Location = new System.Drawing.Point(23, 82);
+            this.panel1.Location = new System.Drawing.Point(23, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(885, 3);
             this.panel1.TabIndex = 20;
             // 
-            // Btn_Supprimer
+            // dataGridViewStock
             // 
-            this.Btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.Btn_Supprimer.FlatAppearance.BorderSize = 0;
-            this.Btn_Supprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.Btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Supprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Supprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Supprimer.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
-            this.Btn_Supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Supprimer.Location = new System.Drawing.Point(338, 550);
-            this.Btn_Supprimer.Name = "Btn_Supprimer";
-            this.Btn_Supprimer.Size = new System.Drawing.Size(244, 55);
-            this.Btn_Supprimer.TabIndex = 19;
-            this.Btn_Supprimer.Text = "       Remise a Zéro";
-            this.Btn_Supprimer.UseVisualStyleBackColor = false;
+            this.dataGridViewStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewStock.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewStock.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStock.GridColor = System.Drawing.Color.DimGray;
+            this.dataGridViewStock.Location = new System.Drawing.Point(3, 74);
+            this.dataGridViewStock.Name = "dataGridViewStock";
+            this.dataGridViewStock.Size = new System.Drawing.Size(923, 470);
+            this.dataGridViewStock.TabIndex = 24;
             // 
-            // button1
+            // btnStock
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(664, 550);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 55);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "       Remise a Zéro";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnStock.Image = global::PosteTriangle.Properties.Resources.packages;
+            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.Location = new System.Drawing.Point(23, 556);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(244, 55);
+            this.btnStock.TabIndex = 23;
+            this.btnStock.Text = "       Stock Poste";
+            this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
-            // button2
+            // btnPerform
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Image = global::PosteTriangle.Properties.Resources.Close_2_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(23, 550);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 55);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "       Remise a Zéro";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPerform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPerform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnPerform.FlatAppearance.BorderSize = 0;
+            this.btnPerform.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnPerform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerform.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerform.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPerform.Image = global::PosteTriangle.Properties.Resources.speedometer1;
+            this.btnPerform.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerform.Location = new System.Drawing.Point(664, 556);
+            this.btnPerform.Name = "btnPerform";
+            this.btnPerform.Size = new System.Drawing.Size(244, 55);
+            this.btnPerform.TabIndex = 22;
+            this.btnPerform.Text = "       Performance";
+            this.btnPerform.UseVisualStyleBackColor = false;
+            this.btnPerform.Click += new System.EventHandler(this.btnPerform_Click);
             // 
-            // dataGridView1
+            // btnProd
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(885, 453);
-            this.dataGridView1.TabIndex = 24;
+            this.btnProd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnProd.FlatAppearance.BorderSize = 0;
+            this.btnProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProd.Image = global::PosteTriangle.Properties.Resources.production;
+            this.btnProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProd.Location = new System.Drawing.Point(338, 556);
+            this.btnProd.Name = "btnProd";
+            this.btnProd.Size = new System.Drawing.Size(244, 55);
+            this.btnProd.TabIndex = 19;
+            this.btnProd.Text = "       Production";
+            this.btnProd.UseVisualStyleBackColor = false;
+            this.btnProd.Click += new System.EventHandler(this.btnProd_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label1.Location = new System.Drawing.Point(285, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(327, 37);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Tables des Données";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // User_Client_Recherche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.TxtDate);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewStock);
+            this.Controls.Add(this.btnStock);
+            this.Controls.Add(this.btnPerform);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Btn_Supprimer);
+            this.Controls.Add(this.btnProd);
             this.Name = "User_Client_Recherche";
             this.Size = new System.Drawing.Size(929, 625);
             this.Load += new System.EventHandler(this.User_Client_Recherche_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TxtDate;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Btn_Supprimer;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnProd;
+        private System.Windows.Forms.Button btnPerform;
+        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.DataGridView dataGridViewStock;
+        private System.Windows.Forms.Label label1;
     }
 }
