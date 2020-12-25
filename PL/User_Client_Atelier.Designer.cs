@@ -522,7 +522,7 @@ namespace PosteTriangle.PL
             "PncTriangle",
             "PncVague",
             "PncPF"});
-            this.comboBox1.Location = new System.Drawing.Point(687, 187);
+            this.comboBox1.Location = new System.Drawing.Point(686, 186);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 32);
             this.comboBox1.TabIndex = 40;

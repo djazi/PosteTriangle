@@ -327,15 +327,19 @@ namespace PosteTriangle.PL
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+            
+
             try
             {
+                
 
 
                 //auto_increment pour PC et PNC et stocke 
                 int s = Convert.ToInt32(TxtStockEc_Nominale.Text);
                 if (s > 0)
                 {
-                    if (checkBoxPC.Checked)
+                    if (checkBoxPC.Checked && comboBoxPosteSuivant.Text != "Poste Suivant") 
                     {
                         a++;
                         TxtP_Conforme.Text = a.ToString();
@@ -346,6 +350,9 @@ namespace PosteTriangle.PL
                         TxtStock_EC.Text = TxtStockEc_Nominale.Text;
 
 
+                        
+
+
                         BL.CDB db = new BL.CDB();
                         MySqlCommand command = new MySqlCommand("UPDATE stock_poste SET Striangle=@s WHERE Date=@dt ", db.getConnection());
 
@@ -354,9 +361,15 @@ namespace PosteTriangle.PL
                         command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = TxtDate.Text;
                         command.Parameters.Add("@s", MySqlDbType.Int32).Value = TxtStockEc_Nominale.Text;
 
+
+
+                        
+
                         //open the onnection       
 
                         db.openConnection();
+
+
 
                         //envoie OF a PF
                         if (comboBoxPosteSuivant.SelectedItem.Equals("PF"))
@@ -446,7 +459,7 @@ namespace PosteTriangle.PL
 
 
                     // si la piece non conforme envoie au poste suivant 
-                    if (checkBoxPNC.Checked)
+                    if (checkBoxPNC.Checked && comboBox1.Text != "Poste Suivant ")
                     {
 
                         b++;
@@ -563,7 +576,7 @@ namespace PosteTriangle.PL
             {
                 MessageBox.Show("Entrer la Date d'aujourd'hui d'abord et cliquer sur le button ouverture ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
         }
     
 
@@ -650,6 +663,17 @@ namespace PosteTriangle.PL
                 {
                     timer1.Stop();
                     TxtH_Fin.Text = DateTime.Now.ToString("HH:mm:ss"); ;
+                }
+
+                if(TxtP_Conforme.Text== "Piéces Conformes" )
+                {
+                    TxtP_Conforme.Text ="0";
+                   
+
+                }
+                if(TxtP_N_Conformes.Text == "Piéces Non Conformes")
+                {
+                    TxtP_N_Conformes.Text = "0";
                 }
             }
 
