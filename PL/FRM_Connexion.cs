@@ -97,7 +97,7 @@ namespace PosteTriangle.PL
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `Username`=@usn AND `Password`=@pass", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `user_info` WHERE `Username`=@usn AND `Password`=@pass", db.getConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = usr;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = pwd;

@@ -55,6 +55,17 @@ namespace PosteTriangle.PL
         private void BtnQuitter_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+            BL.CDB db = new BL.CDB();
+            MySqlCommand command = new MySqlCommand("UPDATE connexion SET Ctriangle=@s WHERE 1 ", db.getConnection());
+
+            db.openConnection();
+
+
+
+            int a = 0;
+            command.Parameters.Add("@s", MySqlDbType.Int32).Value = a;
+            command.ExecuteNonQuery();
+            db.closeConnection();
         }
 
         private void BtnMinimized_Click_1(object sender, EventArgs e)
@@ -113,6 +124,25 @@ namespace PosteTriangle.PL
 
         private void BtnAtelier_Click(object sender, EventArgs e)
         {
+           
+            BL.CDB db = new BL.CDB();
+            MySqlCommand command = new MySqlCommand("UPDATE connexion SET Ctriangle=@s WHERE 1 ", db.getConnection());
+
+            db.openConnection();
+
+
+
+            int a = 1;
+            command.Parameters.Add("@s", MySqlDbType.Int32).Value = a;
+            command.ExecuteNonQuery();
+            db.closeConnection();
+
+
+
+
+
+
+
             pnlbut.Top = BtnAtelier.Top;
             if(!pnlfirst.Controls.Contains(User_Client_Atelier.Instance))
             {
@@ -127,6 +157,12 @@ namespace PosteTriangle.PL
                 User_Client_Atelier.Instance.BringToFront();
                     
             }
+           
+
+
+
+
+
 
         }
 

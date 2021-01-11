@@ -617,6 +617,8 @@ namespace PosteTriangle.PL
             catch (Exception ex)
             {
                 MessageBox.Show("Entrer la Date d'aujourd'hui d'abord et cliquer sur le button ouverture ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                timer1.Stop();
+                timer2.Stop();
             }
 
 
@@ -681,6 +683,8 @@ namespace PosteTriangle.PL
             catch (Exception ex)
             {
                 MessageBox.Show("Entrer la *Date d'aujourd'hui* d'abord et cliquer sur le button *Ouverture* aprés button *Suivant*  ", "Lire le Guide ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                timer2.Stop();
+                timer1.Stop();
             }
 
         }
@@ -704,6 +708,8 @@ namespace PosteTriangle.PL
             TxtTKT_Time.Text = "Takt time";
             comboBoxPosteSuivant.Text = "Poste Suivant";
             TxtTimer.Text = "0";
+            timer2.Stop();
+            timer1.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
