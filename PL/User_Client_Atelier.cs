@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace PosteTriangle.PL
+//this apps made by khalid djazi et ouissal allam soufiane halloumi please don't change this comment or delete it and don't change the names in the menu forms 
+//you can add change add delete upgrade this app for better performance for the user experience FOR IMS promo 2021
+//contact me khalid djazi by my mail adress khalid.djazi@esith.net 
 {
 
     public partial class User_Client_Atelier : UserControl

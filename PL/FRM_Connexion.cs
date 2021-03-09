@@ -86,6 +86,9 @@ namespace PosteTriangle.PL
 
 
         }
+        //this apps made by khalid djazi et ouissal allam soufiane halloumi please don't change this comment or delete it and don't change the names in the menu forms 
+        //you can add change add delete upgrade this app for better performance for the user experience FOR IMS promo 2021
+        //contact me khalid djazi by my mail adress khalid.djazi@esith.net 
 
         private void BtnSe_Connecter_Click(object sender, EventArgs e)
         {
